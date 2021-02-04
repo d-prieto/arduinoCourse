@@ -21,3 +21,20 @@ Aquí están el resto de repositorios de los alumnos
 * [Naira](https://github.com/chechiliaa/arduino)
 * [Marcos]
 
+## Proyectos realizados 
+
+* Código morse 
+* (proyecto de libro) Semáforo (highspeed engager)
+* Sensor de temperatura 
+* Proyectos de PWM
+* Proyecto de luz RGB con PWM y botones
+* Proyecto de sensores luz RGB con calibración
+* Proyecto de sensores luz RGB con calibración y Kill Switch
+* Proyecto de theremin con Kill Switch
+* Proyecto de melodía con kill switch 
+
+### Proyectos en curso 
+
+* Proyecto con diferentes melodías 
+* Proyecto de generador de melodías aleatorias
+* Proyecto de Theremin Térmico
