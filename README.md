@@ -16,7 +16,7 @@ Aquí están el resto de repositorios de los alumnos
 * [Bangwei](https://github.com/chenbangwei/Arduino)
 * [Jaume](https://github.com/Jsamapro/arduino)
 * [Alba](https://github.com/Albitah24/arduino/)
-* [Javi] [Enlace a su youtube de rap público](https://www.youtube.com/channel/UCu0FMoy093Dnx6avLm4D-Aw)
+* [Javi](https://github.com/reverte04/arduino) [Enlace a su youtube de rap público](https://www.youtube.com/channel/UCu0FMoy093Dnx6avLm4D-Aw)
 * [Ramón](https://github.com/ItsMonxxu/Arduino)
 * [Naira](https://github.com/chechiliaa/arduino)
 * [Marcos](https://github.com/marcoshens/arduinoo)
@@ -32,9 +32,16 @@ Aquí están el resto de repositorios de los alumnos
 * Proyecto de sensores luz RGB con calibración y Kill Switch
 * Proyecto de theremin con Kill Switch
 * Proyecto de melodía con kill switch 
-
-### Proyectos en curso 
-
 * Proyecto con diferentes melodías 
 * Proyecto de generador de melodías aleatorias
 * Proyecto de Theremin Térmico
+
+### Proyectos en curso 
+
+* Proyecto de medidor de estado de ánimo con potenciador. 
+* Proyecto de potenciador para añadir y quitar luz an led RGB
+* Proyecto de potenciador para añadir y quitar tono a un altavoz. (con Kill switch)
+* Proyecto de sensor de temperatura para girar un servomotor
+* Proyecto de botones que giran un servomotor
+* Proyecto de un ciclo automatizado activado por botones
+
