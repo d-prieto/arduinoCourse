@@ -67,4 +67,6 @@ Aquí están el resto de repositorios de los alumnos
 * [Emoticonos](https://emojikeyboard.io/)
 * [Referencia Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
+* [Plantilla](https://github.com/d-prieto/arduinoCourse/blob/main/plantilla.ino)
+
 
