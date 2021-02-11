@@ -23,20 +23,29 @@ Aquí están el resto de repositorios de los alumnos
 
 ## Proyectos realizados 
 
+
+### Proyectos con LED Y botón 
+
 * Código morse 
 * (proyecto de libro) Semáforo (highspeed engager)
 * Sensor de temperatura 
 * Proyectos de PWM
+
+### Proyectos de luz RGB 
+
 * Proyecto de luz RGB con PWM y botones
 * Proyecto de sensores luz RGB con calibración
 * Proyecto de sensores luz RGB con calibración y Kill Switch
+
+### Proyectos de piezo (altavoz) 
+
 * Proyecto de theremin con Kill Switch
 * Proyecto de melodía con kill switch 
 * Proyecto con diferentes melodías 
 * Proyecto de generador de melodías aleatorias
 * Proyecto de Theremin Térmico
 
-### Proyectos en curso 
+### Proyectos con servomotor o potenciómetro
 
 * Proyecto de medidor de estado de ánimo con potenciador. 
 * Proyecto de potenciador para añadir y quitar luz an led RGB
@@ -44,4 +53,18 @@ Aquí están el resto de repositorios de los alumnos
 * Proyecto de sensor de temperatura para girar un servomotor
 * Proyecto de botones que giran un servomotor
 * Proyecto de un ciclo automatizado activado por botones
+
+### Proyectos con uso de millis () sin delay ()
+
+
+### Proyectos en curso 
+
+* Proyecto de teclado con única entrada analógica
+* Proyecto de de temporizador 
+
+## Referencia
+
+* [Emoticonos](https://emojikeyboard.io/)
+* [Referencia Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+
 
