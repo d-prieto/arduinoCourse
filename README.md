@@ -44,23 +44,28 @@ Aquí están el resto de repositorios de los alumnos
 * Proyecto con diferentes melodías 
 * Proyecto de generador de melodías aleatorias
 * Proyecto de Theremin Térmico
+* Proyecto de teclado con entrada analógica (4/6 botones)
+* Proyecto de teclado con entrada de potenciómetro por intervalos
 
 ### Proyectos con servomotor o potenciómetro
 
 * Proyecto de medidor de estado de ánimo con potenciador. 
-* Proyecto de potenciador para añadir y quitar luz an led RGB
+* Proyecto de potenciador para añadir y quitar luz a un led RGB
 * Proyecto de potenciador para añadir y quitar tono a un altavoz. (con Kill switch)
 * Proyecto de sensor de temperatura para girar un servomotor
 * Proyecto de botones que giran un servomotor
 * Proyecto de un ciclo automatizado activado por botones
 
-### Proyectos con uso de millis () sin delay ()
+### Proyectos con uso de millis () sin delay () 
+
+* Proecto de reloj de arena digital
+
+### Proyectos de motores de corriente contínua 9V
 
 
 ### Proyectos en curso 
 
-* Proyecto de teclado con única entrada analógica
-* Proyecto de de temporizador 
+* Proyecto de molinillo
 
 ## Referencia
 
