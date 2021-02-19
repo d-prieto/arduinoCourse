@@ -40,18 +40,24 @@ This machine is disconnected fully from the current when it's out so it deletes 
 
 This machine only engraves or cuts. It can't do 2 things in the same job.Take that into acount. 
 
-### Rhino case 
-
-I have a file of A3 that has something engraved and something cut. (the usual) In this case is 
-
-You have to differenciate engraved and "engraved cut". 
-
 In this document I differenciate engraving and cutting between how the laser operates rather than the consecuences of the movement:
 
 * Raster/engraving is the movement that the laser does scanlines and in some points it makes goes on and some points it goes off
 * Vector/cutting is the movment that the laser goes following the lines of the drawing. 
 
 Both could (depending on the parameters and material cut through or just carve the stock. 
+
+### Rhino case 
+
+I have a file of A3 that has something engraved and something cut through. I don't have in this case lines that doesn't go through. So I need 2 jobs. One for the raster and 1 for the cut through 
+
+I need to know the size of the stock A3 and I draw a rectangle of that size. 
+
+_Pro tip:_
+
+When you print the rectangle somehow... goes through. To skip it and let the 
+
+
 
 
 
