@@ -62,10 +62,19 @@ Aquí están el resto de repositorios de los alumnos
 
 ### Proyectos de motores de corriente contínua 9V
 
+* Proyecto de molinillo
+* Proyecto de molinillo con potenciómetro
+* Proyecto que inicia una melodía antes de ejecutarse (Naira)
+* Proyecto de molinillo con secuencia diferida (Ramón)
+* Proyecto de molinillo con leds adicionales
+* Proyecto de molinillo con killSwitch (Naira)
+
 
 ### Proyectos en curso 
 
-* Proyecto de molinillo
+* Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei)
+* Proyecto de molinillo con canción ejecutada _a la vez_ que el molinillo (Naira)
+
 
 ## Referencia
 
