@@ -58,11 +58,17 @@ Aquí están el resto de repositorios de los alumnos
 
 ### Proyectos con uso de millis () sin delay () 
 
-* Proecto de reloj de arena digital
+* Proyecto de reloj de arena digital
+Variaciones:
+* Uso de array para intercambiar el orden de encendido.
+* Inicio de secuencia de apagado después de la de encendido.
 
 ### Proyectos de motores de corriente contínua 9V
 
 * Proyecto de molinillo
+
+#### Variaciones:
+
 * Proyecto de molinillo con potenciómetro
 * Proyecto que inicia una melodía antes de ejecutarse (Naira)
 * Proyecto de molinillo con secuencia diferida (Ramón)
@@ -72,8 +78,10 @@ Aquí están el resto de repositorios de los alumnos
 
 ### Proyectos en curso 
 
+* Proyecto de molinillo con teclado de velocidades
 * Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei)
 * Proyecto de molinillo con canción ejecutada _a la vez_ que el molinillo (Naira)
+* Proyecto de mando PSX
 
 
 ## Referencia
