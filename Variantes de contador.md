@@ -18,7 +18,9 @@ Una vez he visto que funcionaba he modificado el programa del digital clock para
 
 ### Refactorizando el reloj digital
 
-Después lo he refactorizado (en parte) para poder hacer y analizar el código mejor. Cada vez modifico las variables para que tengan sentido en ese programa. Así que puede haber cambios en los nombres de las variables (porque al hacer cosas diferentes, prefiero cambiarles de nombre a uno que tenga sentido en ese programa). Se puede ver [aquí.](https://github.com/d-prieto/arduinoCourse/blob/main/Countdown_digitaltimer_refactored.ino).
+Después lo he refactorizado (en parte) para poder hacer y analizar el código mejor. Cada vez modifico las variables para que tengan sentido en ese programa. Así que puede haber cambios en los nombres de las variables (porque al hacer cosas diferentes, prefiero cambiarles de nombre a uno que tenga sentido en ese programa).
+
+Esta versión además solo funciona si el botón está pulsado permanentemente (si no, no se encienden los pines). Se puede ver [aquí.](https://github.com/d-prieto/arduinoCourse/blob/main/Countdown_digitaltimer_refactored.ino).
 
 Básicamente se separa checkbutton y updatePins en dos funciones. También tengo que poner la variable de current time como global para que siga en el ámbito de ambas funciones. 
 
