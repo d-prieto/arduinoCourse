@@ -1,0 +1,66 @@
+/*
+ * 
+ * Nombre: David Prieto
+ * Fecha: 21/02/2021
+ * Este programa es una modificación del Reloj digital (proyecto del starter kit)
+ * 
+ * Al pulsar el botón comienza a encender los leds. Si el botón deja de presionarse se apagan todos. 
+*/
+
+// constante del pin del botón.
+const int switchPin = 3;
+const int startingOutputPin = 4; // variable para guardar el primer pin a activar. 
+const int finishingOutputPin = 10;  //constante para guardar el último pin a activar. 
+
+unsigned long previousTime = 0; // store the last time an LED was updated
+int switchState = 0; // the current switch state
+int prevSwitchState =0; // the previous switch state
+
+
+int currentPin = startingOutputPin; // en esta variable guardamos el valor del pin que queremos activar
+
+// 600000 = 10 minutes in milliseconds
+long interval = 600; // interval at which to light the next LED
+
+void setup() {
+  // utilizamos un bucle for para iniciar los leds
+  for (int x = startingOutputPin; x <= finishingOutputPin; x++) {
+    pinMode(x, OUTPUT);
+  }
+  // Pin del botón como input
+  pinMode(switchPin, INPUT);
+  // Iniciamos la comunicación con el ordenador por si necesitamos resolver cualquier error. 
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Miramos la hora y la guardamos
+  unsigned long currentTime = millis();
+
+  // Comparamos la hora con la "hora anterior" y revisamos si ha pasado tiempo suficiente (interval)
+  if (currentTime - previousTime > interval) {
+    // Si ya ha pasado el tiempo de intervalo, decimos que la última vez que se activó esto es ahora
+    previousTime = currentTime;
+    // encendemos el pin que le toca
+    digitalWrite(currentPin, HIGH);
+    // aumentamos la variable del pin para que luego le toque al siguiente pin
+    currentPin++;
+  }
+
+  // leemos el botón y lo guardamos en switchtate
+  switchState = digitalRead(switchPin);
+  Serial.println(switchState);
+
+  // if the switch has changed
+  if (switchState != prevSwitchState) {
+    for (int x = startingOutputPin; x <= finishingOutputPin; x++) {
+     digitalWrite(x, LOW);
+    }
+    // la variable del led la mandamos al inicio
+    currentPin = startingOutputPin;
+    //reset the timer
+    previousTime = currentTime;
+  }
+  // set the previous switch state to the current state
+  prevSwitchState = switchState;
+}
