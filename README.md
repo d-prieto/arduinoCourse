@@ -66,20 +66,16 @@ Variaciones:
 ### Proyectos de motores de corriente contínua 9V
 
 * Proyecto de molinillo
-
-#### Variaciones:
-
 * Proyecto de molinillo con potenciómetro
 * Proyecto que inicia una melodía antes de ejecutarse (Naira)
 * Proyecto de molinillo con secuencia diferida (Ramón)
-* Proyecto de molinillo con leds adicionales
 * Proyecto de molinillo con killSwitch (Naira)
 
 
 ### Proyectos en curso 
 
 * Proyecto de molinillo con teclado de velocidades
-* Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei)
+* Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei) [Variaciones explicadas aquí](https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador)
 * Proyecto de molinillo con canción ejecutada _a la vez_ que el molinillo (Naira)
 * Proyecto de mando PSX
 
