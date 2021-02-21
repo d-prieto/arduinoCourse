@@ -17,6 +17,7 @@ const int startingOutputPin = 4; // variable para guardar el primer pin a activa
 const int finishingOutputPin = 10;  //constante para guardar el último pin a activar. 
 
 unsigned long previousTime = 0; // store the last time an LED was updated
+unsigned long currentTime = 0; // variable para guardar el tiempo actual
 int switchState = 0; // the current switch state
 int prevSwitchState =0; // the previous switch state
 
@@ -44,7 +45,7 @@ void loop() {
 
 void updatePins() {
     // Miramos la hora y la guardamos
-  unsigned long currentTime = millis();
+  currentTime = millis();
 
   // Comparamos la hora con la "hora anterior" y revisamos si ha pasado tiempo suficiente (interval)
   if (currentTime - previousTime > interval) {
