@@ -32,6 +32,8 @@ El resultado de este Kill Switch es [este](https://github.com/d-prieto/arduinoCo
 
 La siguiente iteración es que al pulsar el botón inicie una secuencia de apagado que inicia donde está encendido el último led encendido hasta el primero. Si se vuelve a pulsar el encendido comienza donde quedó.[Se puede ver aquí](https://github.com/d-prieto/arduinoCourse/blob/main/Countdown_killSwitch_shutdown_sequence.ino)
 
+## Variaciones para les alumnes
+
 A partir de estos se pueden hacer otros programas. 
 
 - Conectar otros outputs a este proyecto, de tal forma que el motor sea el último en encenderse. (Este es el proyecto de Bangwei)
