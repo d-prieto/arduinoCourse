@@ -4,6 +4,12 @@
 
 Este documento explica las variantes realizadas a partir del trabajo de [Bangwei](https://github.com/chenbangwei/Arduino). En su proyecto (complejo) consistía que presionando un botón se inciiara una secuencia que iniciase varios leds (incluyendo un led RGB) hasta iniciar el motor. 
 
+Este es el hardware 
+
+<image src="https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Variaciones%20LED%20Hardware%2001.jpg" width="500">
+  
+<image src="https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Variaciones%20LED%20Hardware%2002.jpg" width="500">
+
 He creado esta secuencia de programas, de más sencillo a más complejo para ilustrar el proceso de programación de algo así. 
 
 ## Programas
