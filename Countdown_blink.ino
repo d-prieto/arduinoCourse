@@ -3,7 +3,7 @@
  * Nombre: David Prieto
  * Fecha: 21/02/2021
  * Este programa es una modificación del blink
- * Sirve
+ * Sirve para comprobar que los LED funcionan correctamente y están bien conectados. No revisa el botón de input. 
 
 */
 
