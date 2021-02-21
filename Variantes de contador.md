@@ -25,7 +25,7 @@ La siguiente iteración es que al pulsar el botón inicie una secuencia de apaga
 A partir de estos se pueden hacer otros programas. 
 
 - Conectar otros outputs a este proyecto, de tal forma que el motor sea el último en encenderse. (Este es el proyecto de Bangwei)
-- Utilizar Arrays para cambiar la secuencia de encendido y apagado.
+- Utilizar Arrays para cambiar la secuencia de encendido y apagado. [Alba tiene una versión similar que se puede utilizar de referencia](https://github.com/Albitah24/arduino/blob/main/Reloj__de_arena_desordenadoUwU.ino)
 - Que la secuencia de encendido apague todo lo que estuviera encendido antes de arrancar. (Este requiere añadir una secuencia de "reinicio" cuando se acaba de pulsar el botón para iniciar
 - Que la secuencia de apagado no solo funcionara con KillSwitch sino cuando no pulsas el botón. (Este es mezclar el último que funciona con KillSwitch con alguno de los checkbuttons anteriores)
 - Hacer que la velocidad de apagado y encendido sean diferentes.
