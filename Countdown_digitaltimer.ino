@@ -45,6 +45,10 @@ void loop() {
     digitalWrite(currentPin, HIGH);
     // aumentamos la variable del pin para que luego le toque al siguiente pin
     currentPin++;
+        // En caso de que se exceda el límite de los pines, se queda automáticamente en el número +1 para evitar errores y reinicios extraños
+    if (currentPin > finishingOutputPin) { 
+      currentPin = finishingOutputPin;
+      }
   }
 
   // leemos el botón y lo guardamos en switchtate
