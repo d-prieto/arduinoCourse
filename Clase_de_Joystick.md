@@ -83,6 +83,7 @@ Esta conexión mezcla la ventaja de los cables macho/hembra con dejar el breadbo
 
 He adaptado este código que podéis ver en este enlace. Transmite la información al PC y necesitaréis el monitor Serie para comprobar que funciona. 
 
+[Código aquí](https://github.com/d-prieto/arduinoCourse/blob/main/joysticktest.ino)
 
 
 ## Referencia 
