@@ -26,7 +26,7 @@ Si el sensor está en el centro los valores de X y de Y estarán en torno a 500,
 
 En este caso, además, si se presiona el joystick se pulsa un botón (si os fijáis podéis ver el botón). 
 
-## Conexión
+### Conexiones del módulo
 
 El módulo tiene varias salidas y con su nombre indican hacia donde deberían ir. Os las enumero:
 
@@ -38,7 +38,60 @@ VRx -> Este es el Voltaje Regulado en el eje X horizontal. Hay que conectarlo a 
 
 VRy -> Este es el Voltaje Regulado en el eje Y vertical. Hay que conectarlo a un pin de lectura analógica para que pueda leerse. 
 
-SW -> Switch. Este es el botón. Al estar ya integrado se puede conectar directamente a un pin digital sin tener que incluir la resistencia. Sin embargo este es un botón pull
+SW -> Switch. Este es el botón. Al estar ya integrado se puede conectar directamente a un pin digital sin tener que incluir la resistencia. Sin embargo este es un botón PULL UP en vez de un botón PULL DOWN (que es lo que hemos realizado en el resto del curso). Esto significa que cuando está sin pulsar leerá 1 (o HIGH) y cuando esté pulsado leerá 0 (o LOW). 
+
+## Conexión para la prueba
+
+He realizado varias conexiones diferentes, utilizando los cables del starter kit y los cables que os dí de extra macho/hembra. Lo importante y común en las tres conexiones es lo siguiente:
+
+* El GND lo llevo al ground del Arduino.
+
+* El 5V lo conecto al 5V del arduino. 
+
+* La conexión a VRx la llevo al pin analógico A0
+
+* La conexión a VRy la llevo al pin analógico A1
+
+* El SW lo conecto al pin 3 (porque el código de prueba usa el pin 3)
+
+### Conexión solo con breadboard 
+
+Os dejo aquí fotos de la conexión usando solo los conectores que tenemos del breadboard. Tendremos que conectar el joystick de tal forma que cada una de sus salidas quede en una fila diferente y conectar cables a esa fila. 
+
+### Conexión solo con cables macho/hembra
+
+Esta conexión la ventaja que tiene es que no necesita de breadboard con lo cual hay libertad total de dejar el joystick en la mesa y usarlo con cierta libertad. 
+
+### Conexión mixta
+
+Esta conexión mezcla la ventaja de los cables macho/hembra con dejar el breadboard disponible para colocar otras piezas. Esta es la que os recomiendo para futuros proyectos (la prueba con varios leds)
+
+## Código de prueba 
+
+He adaptado este código que podéis ver en este enlace. Transmite la información al PC y necesitaréis el monitor Serie para comprobar que funciona. 
+
+const int pinBoton = 3; 
+const int pinEjeY = A1; 
+const int pinEjeX = A0; 
+ 
+void setup() {
+  pinMode(pinBoton, INPUT);
+  digitalWrite(pinBoton, HIGH);
+  Serial.begin(9600);
+}
+ 
+void loop() {
+  Serial.print("Boton:  ");
+  Serial.print(digitalRead(pinBoton));
+  Serial.print("\n");
+  Serial.print("Eje X: ");
+  Serial.print(analogRead(pinEjeX));
+  Serial.print("\n"); //esto es un salto de linea
+  Serial.print("Eje Y: ");
+  Serial.println(analogRead(pinEjeY));
+  Serial.print("\n\n");
+  delay(150);
+}
 
 ## Referencia 
 
