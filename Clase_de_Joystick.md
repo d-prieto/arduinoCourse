@@ -20,13 +20,15 @@ Sí, los mandos de una play funcionan con el mismo principio.
 
 Este es el esquema:
 
-![](http://cursoarduino.proserquisa.com/wp-content/uploads/2016/10/25-03.jpg)
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Esquema%20JK-023.jpg)
 
 Si el sensor está en el centro los valores de X y de Y estarán en torno a 500, cuando se mueve el joystick suben o bajan. 
 
 En este caso, además, si se presiona el joystick se pulsa un botón (si os fijáis podéis ver el botón). 
 
 ### Conexiones del módulo
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick03.JPG)
 
 El módulo tiene varias salidas y con su nombre indican hacia donde deberían ir. Os las enumero:
 
@@ -58,13 +60,24 @@ He realizado varias conexiones diferentes, utilizando los cables del starter kit
 
 Os dejo aquí fotos de la conexión usando solo los conectores que tenemos del breadboard. Tendremos que conectar el joystick de tal forma que cada una de sus salidas quede en una fila diferente y conectar cables a esa fila. 
 
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick05.JPG)
+
+Conexiones sin el Joystick: 
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick04.JPG)
+
 ### Conexión solo con cables macho/hembra
 
 Esta conexión la ventaja que tiene es que no necesita de breadboard con lo cual hay libertad total de dejar el joystick en la mesa y usarlo con cierta libertad. 
 
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick02.JPG)
+
 ### Conexión mixta
 
 Esta conexión mezcla la ventaja de los cables macho/hembra con dejar el breadboard disponible para colocar otras piezas. Esta es la que os recomiendo para futuros proyectos (la prueba con varios leds)
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick01.JPG)
 
 ## Código de prueba 
 
