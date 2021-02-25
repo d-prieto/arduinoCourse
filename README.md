@@ -5,6 +5,10 @@ Arduino examples with comments in Spanish for teaching
 
 Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino. Expanden el contenido del Starter kit para detallar más. 
 
+## Clases
+
+* Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
+
 
 ## Repositorios de alumnos 
 
