@@ -8,6 +8,7 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 ## Clases
 
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
+* Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
 
 
 ## Repositorios de alumnos 
