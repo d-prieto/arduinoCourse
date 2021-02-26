@@ -10,7 +10,7 @@
 
 * Documentarlo y subirlo al repositorio bajo el epìgrafe "clase de operadores"
 
-* Actualizar el snipped del Kill Switch. 
+* Actualizar el snippet del Kill Switch. 
 
 ## Hardware requerido
 
