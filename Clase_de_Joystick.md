@@ -85,6 +85,14 @@ He adaptado este código que podéis ver en este enlace. Transmite la informaci�
 
 [Código aquí](https://github.com/d-prieto/arduinoCourse/blob/main/joysticktest.ino)
 
+## Tarea 
+
+Crear un hardware diferente que utilice el joystick junto con su código, sacarle foto y subir el código a la documentación correctamente. 
+
+Como ejemplo aquí he añadido 3 leds al Joystick (no he incluído el código para que los alumnos lo hagan por su cuenta on el comportamiento que ellos deseen). 
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick%20con%203%20leds.JPG)
+
 
 ## Referencia 
 
