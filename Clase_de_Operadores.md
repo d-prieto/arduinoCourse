@@ -218,6 +218,39 @@ void loop() {
 
 ```
 
+Este programa podría escribirlo como comentaba de otra forma que realiza exactament ela misma función: 
+
+```C++
+void loop() {
+  //lo leo todo del tiron
+  ejeX = analogRead(pinEjeX);
+  ejeY = analogRead(pinEjeY);
+  estadoBoton = digitalRead(pinBoton);
+  //reviso el botón primero
+  if (estadoBoton != HIGH){
+    digitalWrite(pinLedBoton, HIGH);
+  }
+  else{
+    digitalWrite(pinLedBoton, LOW);
+  }
+  //reviso el eje X
+  if (!(ejeX < 923 && ejeX > 100)){
+    digitalWrite(pinLedEjeX, HIGH);
+  }
+  else{
+    digitalWrite(pinLedEjeX, LOW);
+  }
+  //reviso el eje Y
+  if (!(ejeY < 923 && ejeY > 100)){
+    digitalWrite(pinLedEjeY, HIGH);
+  }
+  else{
+    digitalWrite(pinLedEjeY, LOW);
+  }
+}
+
+```
+
 ### Tarea
 
  Por un lado necesitamos utilizar este contenido en alguno de los programas. Puede ser utilizando el Led RGB, puede ser el Joystick. Se puede hacer un programa que tenga las 3 condiciones o se pueden escribir 3 programas que use cada uno uno de los tres operadores (&&, ||, !). Por último hay que actualizar el Kill Switch para dejarlo de forma más limpia. 
