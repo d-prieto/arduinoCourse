@@ -31,6 +31,7 @@ Hemos utilizado comparadores para que esto funcione. Haciendo un repaso rápido 
 * Mayor que > (greater than)
 * Mayor o igual a >= (greater than or equal to) 
 
+
 Estos toman 2 variables y las comparan. Después, en función de la comparación se devolverá un "true" o un "false". Es un atajo a una "función" que podría escribirse así: 
 
 ```C++
@@ -46,4 +47,27 @@ Cuando hicimos el ejemplo en la pizarra, tenemos el ejemplo de "meapetecenpatata
 
 Para ello tenemos 3 operadores booleanos que podemos usar
 
-* El operador y
+* El operador y (&&)
+
+El operador y sólo devuelve "true" cuando ambas condiciones devuelven "true". En este caso "me apetecen patatas" Y "tengo sarten" ambas tienen que ser verdad para que funcione. 
+
+Para escribirlo en teclado español de España, se utiliza el shift (la flecha arriba) con el 6 para crear el símbolo &. Es importante saber que se escriben 2. 
+
+* El operador o (||)
+
+El operador o devuelve "true" cuando al menos una de las dos condiciones devuelve "true". Si la condición fuera "me apetecen patatas o tengo sartén", la función se ejecutaría en caso de que ambas fueran verdad pero también en caso de que apetecieran patatas pero no hay sartén o si hay sarten pero no apetecen patatas. 
+
+Para escribirlo hay que pulsar la tecla "Alt GR" y el número 1 en los teclados en español de España.
+
+
+* El operador no (!)
+
+Este operador niega lo que tenga después de él. Esto vale para hacer comparaciones (en el caso de los ifs) pero también sirve para assignar valores de variables boleanas. 
+
+* Combinación de operadores y paréntesis. 
+
+Es posible combinar estos operadores para realizar complejas decisiones (Si el parámetro de cuanto me gustan las patatas pasa cierto umbral pero luego resulta que la disponibilidad de sarten es diferente a 2 y luego el tiempo disponible es superior a tanto y además inferior a este otro y mi cantidad de hambre llega a determinado nivel).
+
+Es habitual usarlas combinar estas operaciones pero es bueno evitar cosas demasiado complejas precisamente para facilitar la lectura y mantenimiento del código. 
+
+Un ejempplo "Quiero que se ejecute algo si tal variable supera 200"
