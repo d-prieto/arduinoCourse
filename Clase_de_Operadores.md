@@ -70,4 +70,10 @@ Es posible combinar estos operadores para realizar complejas decisiones (Si el p
 
 Es habitual usarlas combinar estas operaciones pero es bueno evitar cosas demasiado complejas precisamente para facilitar la lectura y mantenimiento del código. 
 
-Un ejempplo "Quiero que se ejecute algo si tal variable supera 200"
+Un ejempplo "Quiero que se ejecute algo si tal variable supera 200 pero que sea false la variable deberiaComerPatatas" sería así
+
+```C++
+ if ((variableTal > 200) && !deberiaComerPatatas) {
+ //cosa
+  }
+```
