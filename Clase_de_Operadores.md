@@ -178,3 +178,40 @@ void checkButton() {
 ```
 
 Aquí vemos que no es _tan_ complicado pero de primeras podría ser difícil. En especial por toos estos "not" que salen. 
+
+### Fragmento de código de ejemplo con Joystick
+
+No voy a copiar todo el código pero tengo un joystick y 3 leds. Quiero que un led se active cuando el eje x llegue a los extremos y que el segundo led haga lo mismo con el eje y, y por último un tercer led que se encianda cuando pulso el botón. El loop luce algo así como (habiendo declarado todas las variables y haciendo el setup correctamente)
+
+Pongo las variables en castellano
+
+```C++
+void loop() {
+  //lo leo todo del tiron
+  ejeX = analogRead(pinEjeX);
+  ejeY = analogRead(pinEjeY);
+  estadoBoton = digitalRead(pinBoton);
+  //reviso el botón primero
+  if (estadoBoton == LOW){
+    digitalWrite(pinLedBoton, HIGH);
+  }
+  else{
+    digitalWrite(pinLedBoton, LOW);
+  }
+  //reviso el eje X
+  if (ejeX >= 923 && ejeX <= 100){
+    digitalWrite(pinLedEjeX, HIGH);
+  }
+  else{
+    digitalWrite(pinLedEjeX, LOW);
+  }
+  //reviso el eje Y
+  if (ejeY >= 923 && ejeY <= 100){
+    digitalWrite(pinLedEjeY, HIGH);
+  }
+  else{
+    digitalWrite(pinLedEjeY, LOW);
+  }
+}
+
+```
