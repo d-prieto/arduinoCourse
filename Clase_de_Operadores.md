@@ -43,6 +43,8 @@ Estos toman 2 variables y las comparan. Después, en función de la comparación
 
 Hoy lo que vamos a ver es cómo componemos estas operaciones para tener condiciones más complicadas. 
 
+### Operadores booleanos
+
 Cuando hicimos el ejemplo en la pizarra, tenemos el ejemplo de "meapetecenpatatas" pero puedo tener una decisión más compleja "me apetecen patatas, además tengo la sartén limpia y además tengo tiempo disponible". 
 
 Para ello tenemos 3 operadores booleanos que podemos usar
@@ -70,6 +72,8 @@ Es posible combinar estos operadores para realizar complejas decisiones (Si el p
 
 Es habitual usarlas combinar estas operaciones pero es bueno evitar cosas demasiado complejas precisamente para facilitar la lectura y mantenimiento del código. 
 
+#### Ejemplos de operadores booleanos
+
 Un ejempplo "Quiero que se ejecute algo si tal variable supera 200 pero que sea false la variable deberiaComerPatatas" sería así
 
 ```C++
@@ -78,4 +82,64 @@ Un ejempplo "Quiero que se ejecute algo si tal variable supera 200 pero que sea 
   }
 ```
 
-Otro ejemplo 
+Otro ejemplo:
+
+"Deseo que el valor de un sensor (guardado en sensorValue) sea más de 514 y menor que 600 para encender un led"
+
+```C++
+ if (sensorValue > 514 && sensorValue < 600) {
+   digitalWrite(pinLed, HIGH);
+  }
+```
+Este le hemos utilizado en el caso del piano donde los valores del sensor eran los que teníamos en las resistencias y en vez de valores fijos tenían cierta variación. 
+
+
+En el caso que tengo yo donde el sensor solo ilumina al llegar a los extremos pero no en el centro, tengo que utilizar el operador "o" de forma obligada. Necesito que el led se active o cuando el sensorX vale muy poco (menor que 100 puse) o cuando vale un valor muy alto (mayor que  923). 
+
+```C++
+ if (sensorX < 100 || sensorX > 923) {
+   digitalWrite(pinLed, HIGH);
+  }
+```
+
+A veces se puede hacer 2 condiciones que digan lo mismo. Cuando esto ocurre muchas veces una forma es mucho más fácil de leer que la otra. En este caso yo puedo escribir la misma condición (encender en caso de que llegue a los extremos) así:
+
+```C++
+ if (!(sensorX >= 100 && sensorX <= 923)) {
+   digitalWrite(pinLed, HIGH);
+  }
+```
+
+Esto se leería como "que el sensor no esté entre 100 y 923". En algunos programas es puñetero porque esa exclamación a veces es difícil de ver.
+
+También existe la opción de que alguien escriba lo siguiente, suponiendo que vamos a reproducir un tono si el valor del sensor analógico esté entre 505 y 515
+
+```C++
+ if (sensorValue > 504) {
+   if (sensorValue <516){
+       tone(speakerPin,tone,duration);
+    }
+  }
+```
+
+Encadenar ifs hace lo mismo pero, en general es poco recomendable a menos que tengas un else por ahí. Por ejemplo
+
+
+```C++
+ if (sensorValue > 504) {
+   if (sensorValue <516){
+       tone(speakerPin,tone,duration);
+    }
+    else{
+       digitalWrite(pin, HIGH);
+    }
+  }
+```
+
+En este caso en caso de que el sensorValue valga 516 o más, en vez de activar el altavoz activará un pin. 
+
+De hecho esto lo podríamos aplicar a nuestro snippet del Kill Switch para escribirlo un poco mejor 
+
+Nuestro Checkbutton hace lo siguiente:
+
+
