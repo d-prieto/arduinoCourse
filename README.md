@@ -90,9 +90,10 @@ Variaciones:
 - Proyecto de teclado que da diferentes velocidades al motor 9V
 - Proyectos de secuencia de leds. 4 proyectos con el código ya hecho. Uno personal. 
 - Proyectos de Joystick. Uno de prueba. Uno personal. 
-- Proyectos de operadores. Uno con cada uno de los tres operadores. 
+- Proyectos de operadores. Uno con cada uno de los tres operadores. Elección del hardware libre. Existe la opción de hacer un único programa que aúne los 3 operadores. 
 - Actualización del KillSwitch con lo aprendido en los operadores. 
 
+**Importante utilizar la documentación incluyendo vuestro nombre, fecha y descripción en el código** 
 
 ## Referencia
 
