@@ -10,6 +10,8 @@
 
 * Documentarlo y subirlo al repositorio bajo el epìgrafe "clase de operadores"
 
+* Actualizar el snipped del Kill Switch. 
+
 ## Hardware requerido
 
 Esta clase requiere de vuestro arduino pero se puede llevar sin tener hardware utilizando únicamente Serial.write y Serial.read, pero es más divertida con algo de hardware. 
@@ -199,14 +201,14 @@ void loop() {
     digitalWrite(pinLedBoton, LOW);
   }
   //reviso el eje X
-  if (ejeX >= 923 && ejeX <= 100){
+  if (ejeX >= 923 || ejeX <= 100){
     digitalWrite(pinLedEjeX, HIGH);
   }
   else{
     digitalWrite(pinLedEjeX, LOW);
   }
   //reviso el eje Y
-  if (ejeY >= 923 && ejeY <= 100){
+  if (ejeY >= 923 || ejeY <= 100){
     digitalWrite(pinLedEjeY, HIGH);
   }
   else{
@@ -215,3 +217,9 @@ void loop() {
 }
 
 ```
+
+### Tarea
+
+ Por un lado necesitamos utilizar este contenido en alguno de los programas. Puede ser utilizando el Led RGB, puede ser el Joystick. Se puede hacer un programa que tenga las 3 condiciones o se pueden escribir 3 programas que use cada uno uno de los tres operadores (&&, ||, !). Por último hay que actualizar el Kill Switch para dejarlo de forma más limpia. 
+ 
+ Recordad documentar correctamente. 
