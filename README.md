@@ -7,6 +7,7 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 
 ## Clases
 
+* Clase de millis (variaciones del contador) https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
 * Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
 
@@ -83,6 +84,14 @@ Variaciones:
 * Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei) [Variaciones explicadas aquí](https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador)
 * Proyecto de molinillo con canción ejecutada _a la vez_ que el molinillo (Naira)
 * Proyecto de mando PSX
+
+### Tareas pendientes semana 22 a 26 de febrero 
+
+- Proyecto de teclado que da diferentes velocidades al motor 9V
+- Proyectos de secuencia de leds. 4 proyectos con el código ya hecho. Uno personal. 
+- Proyectos de Joystick. Uno de prueba. Uno personal. 
+- Proyectos de operadores. Uno con cada uno de los tres operadores. 
+- Actualización del KillSwitch con lo aprendido en los operadores. 
 
 
 ## Referencia
