@@ -142,4 +142,39 @@ De hecho esto lo podríamos aplicar a nuestro snippet del Kill Switch para escri
 
 Nuestro Checkbutton hace lo siguiente:
 
+```C++
+void checkButton() {
+  // leemos el botón y lo guardamos en switchtate
+  switchState = digitalRead(switchPin);
+  Serial.println(switchState);
+  if (switchState == HIGH) {
+    if (isTheButtonBeingPressed == false) {
+      shouldLightPins = !shouldLightPins;
+      isTheButtonBeingPressed = true;
+    }
+  }
+  else {
+    isTheButtonBeingPressed = false;
+  }
+}
+```
 
+Aquí tenemos el mismo problema que antes, tenemos un par de ifs concatenados extraños. Vamos a mejorarlos
+
+
+```C++
+void checkButton() {
+  // leemos el botón y lo guardamos en switchtate
+  switchState = digitalRead(switchPin);
+  Serial.println(switchState);
+  if (switchState == HIGH && !isTheButtonBeingPressed) {
+      shouldLightPins = !shouldLightPins;
+      isTheButtonBeingPressed = true;
+  }
+  else {
+    isTheButtonBeingPressed = false;
+  }
+}
+```
+
+Aquí vemos que no es _tan_ complicado pero de primeras podría ser difícil. En especial por toos estos "not" que salen. 
