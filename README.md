@@ -70,6 +70,7 @@ Aquí están el resto de repositorios de los alumnos
 Variaciones:
 * Uso de array para intercambiar el orden de encendido.
 * Inicio de secuencia de apagado después de la de encendido.
+* Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei) [Variaciones explicadas aquí](https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador)
 
 ### Proyectos de motores de corriente contínua 9V
 
@@ -78,14 +79,19 @@ Variaciones:
 * Proyecto que inicia una melodía antes de ejecutarse (Naira)
 * Proyecto de molinillo con secuencia diferida (Ramón)
 * Proyecto de molinillo con killSwitch (Naira)
+* Proyecto de molinillo con teclado de velocidades
+
+### Proyectos con Joystick 
+
+* Proyecto de Joystick de prueba
 
 
 ### Proyectos en curso 
 
-* Proyecto de molinillo con teclado de velocidades
-* Proyecto de molinillo con secuencia de leds (trabajo en progreso) (Bangwei) [Variaciones explicadas aquí](https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador)
-* Proyecto de molinillo con canción ejecutada _a la vez_ que el molinillo (Naira)
-* Proyecto de mando PSX
+* Proyectos con operadores booleanos
+* Proyecto de Joystick que enciende un led
+* Proyecto de Joystick que toca música
+* Proyecto de pantalla LCD
 
 ### Tareas pendientes semana 22 a 26 de febrero 
 
@@ -96,6 +102,8 @@ Variaciones:
 - Actualización del KillSwitch con lo aprendido en los operadores. 
 
 **Importante utilizar la documentación incluyendo vuestro nombre, fecha y descripción en el código** 
+
+
 
 ## Referencia
 
