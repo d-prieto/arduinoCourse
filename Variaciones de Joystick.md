@@ -182,3 +182,9 @@ Después haremos un control de flujo (if) con la condición de que supere una de
   digitalWrite(pinLed, LOW);
  }
 ```
+
+El valor máximo que puede alcanzar el ejeX es 1023, con lo cual hasta entonces podemos ir viendo su sensibilidad. Con 800 el intervalo es bastante sensible. Y he visto que poniendo ==1023 no llego al tope físico del mecanismo sino que lo supero. 
+
+## Proyecto de Joystick que cuando llegas a un punto determinado suena una pequeña nota en el altavoz
+
+(lo desarrollo ahora mañana mientras probéis los anteriores)
