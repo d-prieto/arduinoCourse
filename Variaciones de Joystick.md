@@ -49,17 +49,19 @@ void loop() {
 }  
 ```
 
-### Proyecto de LED que se enciende cuando pulsas el botón del joystick 
+## Proyecto de LED que se enciende cuando pulsas el botón del joystick 
 
-#### Hardware
+### Hardware
 
 Tengo un led conectado en este caso al pin 9. Podeis usar este pin o cualquier otro. 
 
-#### Software 
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick%20con%201%20led.JPG)
+
+### Software 
 
 Aquí explicaré primero las cosas que voy a añadir y cómo queda el código al final. 
 
-##### Inicio del programa
+#### Inicio del programa
 
 Primero añadiré a la plantilla mi nombre, la fecha y lo que hace el programa
 
@@ -74,7 +76,7 @@ Primero añadiré a la plantilla mi nombre, la fecha y lo que hace el programa
 */
 
 ```
-##### Variables
+#### Variables
 
 Después añado en la sección de variables (antes del setup y el loop) las nuevas variables que necesito. Una de un pin y otra del estado del botón. En este caso para la definición de variables, para facilitar la comprensión las escribiré en castellano. Así que en vez de SwitchState estoy utilizando EstadoBoton
 
@@ -83,14 +85,14 @@ const int pinLed = 9;
 
  int estadoBoton = 1;
 ```
-##### Setup 
+#### Setup 
 
 En el Setup sólo tenemos que añadir una línea para inicializar el LED: 
 
 ```C++
  pinMode(pinLed, OUTPUT);
 ```
-##### Loop 
+#### Loop 
 
 Ahora el loop. Este loop lo hemos hecho varias veces. Necesitamos que 
 a) Lea el botón
@@ -101,6 +103,7 @@ Para lo primero usamos lo que hemos usado otras veces:
 ```C++
  estadoBoton= digitalRead(pinBoton);
 ```
+Recordad que digitalRead puede dar o 1 (HIGH) o 0 (LOW) y sólo esos 2 valores posibles. 
 
 Si tuvieramos algún problema, añadiríamos después un Serial.println(estadoBoton) para ver en el PC qué señal recibe el botón y si está bien conectado (debería leer 0 cuando está pulsado y 1 cuando está sin pulsar). 
 
@@ -116,7 +119,66 @@ En el caso de que sea "LOW" encenderemos el LED usando "digitalWrite" y le indic
   digitalWrite(pinLed, LOW);
  }
 ```
+#### Código completo 
 
 El código entero está aquí: https://github.com/d-prieto/arduinoCourse/blob/main/JoystickLedButton.ino
 
 
+## Proyecto de LED que se enciende cuando llevas el joystick cerca del punto máximo en el eje X 
+
+Este proyecto parte del mismo Hardware que tenemos pero vamos a revisar uno de los 2 ejes, el eje X. Después haremos otras acciones en el eje Y. Pero vamos despacio. 
+
+Este proyecto parte del anterior así que iré mencionando las cosas que hay que **añadir** y también las que hay que **quitar**. Seguiremos el mismo orden que en el ejercicio anterior, salvo por la parte de que el código completo no estará disponible. (Se pide que los alumnos seáis capaces de montarlo por vuestra parte a partir de los anteriores ejercicios y subirlo correctamente). 
+
+### Hardware
+
+Utiliza el mismo Hardware que el ejercicio anterior. 
+
+### Software 
+
+#### Inicio del programa
+
+Primero añadiré a la plantilla mi nombre, la fecha y lo que hace el programa
+
+```C++
+/*
+*  Documentación del programa 
+*  Autore: David Prieto
+*  Fecha: 28/02/2021
+*  Código referencia: https://github.com/d-prieto/arduinoCourse/blob/main/JoystickLedButton.ino
+*  Descripción del programa: Este programa cuando el Joystick llega a determinado rango de valores en el EjeX ilumina el LED. Si no, el led se encuentra apagado. 
+*  Hardware necesario: Joystick. Led. Resistencia de 220 Ohms
+*/
+```
+
+#### Variables
+
+Aquí sí es cierto que tenemos que guardar el pin del led, pero no necesitamos el **estadoBoton** para nada, así que lo borraremos. En su lugar vamos a utilizar una variable que le llamaremos **valorEjeX**
+
+```C++
+
+ int valorEjeX = 0; 
+```
+#### Setup 
+
+Aquí no necesitamos cambiar el setup
+
+#### Loop 
+
+En este caso vamos a hacer algo similar que con el botón. Leeremos el sensor del ejeX. Pero en vez de usar DigitalRead, usaremos AnalogRead. DigitalRead (lectura digital traduciendo literalmente) nos da valores de 0 o 1. Pero AnalogRead nos da valores entre 0 y 1023. En este caso el valor 0 es el extremo izquierdo y el valor 1023 es el valor moviendo hasta el tope de la derecha el Joystick. 
+
+```C++
+ valorEjeX= analogRead(pinBoton);
+```
+
+Después haremos un control de flujo (if) con la condición de que supere una determinada franja. En este caso he puesto el valor 800, pero **podéis probar otros valores para ver qué ocurre**. 
+
+```C++
+ valorEjeX = analogRead(pinEjeX);
+ if (valorEjeX > 800){
+  digitalWrite(pinLed, HIGH);
+ }
+ else{
+  digitalWrite(pinLed, LOW);
+ }
+```
