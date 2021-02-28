@@ -103,3 +103,20 @@ Para lo primero usamos lo que hemos usado otras veces:
 ```
 
 Si tuvieramos algún problema, añadiríamos después un Serial.println(estadoBoton) para ver en el PC qué señal recibe el botón y si está bien conectado (debería leer 0 cuando está pulsado y 1 cuando está sin pulsar). 
+
+Después tenemos el control de flujo (el portero de discoteca que hemos mencionado algunas veces) if. Lo que ocurre es que este botón, a diferencia de los que solemos montar normalmente funciona que "LOW" es cuando está pulsado y no al revés. Esto depende de cómo sea la estructura eléctrica de la conexión del botón. 
+
+En el caso de que sea "LOW" encenderemos el LED usando "digitalWrite" y le indicaremos el pin y HIGH para que lo encienda. En el else haremos lo contrario para que, si el botón no está pulsado, apague el LED
+
+```C++
+  if (estadoBoton == LOW){
+  digitalWrite(pinLed, HIGH);
+ }
+ else{
+  digitalWrite(pinLed, LOW);
+ }
+```
+
+El código entero está aquí: https://github.com/d-prieto/arduinoCourse/blob/main/JoystickLedButton.ino
+
+
