@@ -200,3 +200,25 @@ En mi caso como el piezo se lo dejé a alguien que se le rompió el suyo, utiliz
 Dejo igualmente el Joystick y el led donde estaban dado que siguen funcionando en este sketch. 
 
 ### Software
+
+#### Inicio del programa
+
+Aquí sí caben modificaciones en la parte del hardware y en la descripción. 
+
+```C++
+/*
+*  Documentación del programa 
+*  Autore: David Prieto
+*  Fecha: 29/02/2021
+*  Código referencia: https://github.com/d-prieto/arduinoCourse/blob/main/JoystickLedButton.ino
+*  Descripción del programa: Este programa cuando el Joystick llega a determinado rango de valores en el EjeX ilumina el LED. Si no, el led se encuentra apagado. En el ejeY además si llega a determinado umbral, el altavoz hará un breve pitido. 
+*  Hardware necesario: Joystick. Led. Resistencia de 220 Ohms
+*/
+```
+#### Variables
+
+#### Setup 
+
+Aquí no necesitamos cambiar el setup
+
+#### Loop 
