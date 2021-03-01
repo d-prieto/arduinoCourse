@@ -217,8 +217,42 @@ Aquí sí caben modificaciones en la parte del hardware y en la descripción.
 ```
 #### Variables
 
+Añadimos la variable para guardar el eje Y. Le llamaremos valorEjeY, como la del ejeX podrá guardar valores entre 0 y 1023
+
+```C++
+
+ int valorEjeY = 0; 
+```
+
+También añado un par de variables que son la frecuencia del sonido (440 hertzios, un LA) y una duración del sonido (en milisegundos) para probar. 
+
+```C++
+
+ int frecuenciaNota = 440; 
+ int duracionSonido = 250;
+ 
+```
+
 #### Setup 
 
 Aquí no necesitamos cambiar el setup
 
 #### Loop 
+
+Este loop mantiene lo anterior, leer los datos del eje X y hacer algo con ello. De momento lo podemos dejar tal cual y poner después el eje Y. Cuando tengamos ese valor lo comparamos con un valor (por ejemplo que sea menor que 223) y en ese caso, ponemos un tone. Tone es la funcion que necesitamos para crear un sonido y necesita el pin, la frecuencia de la nota y la duración del sonido en milisegundos. Las tres cosas las tenemos guardadas en variables (ver sección de variables) así que las usamos. 
+
+En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz. 
+
+```C++
+
+ valorEjeY = analogRead(pinEjeY);
+ if (valorEjeY < 223){
+  tone(pinAltavoz,frecuenciaNota,duracionSonido);
+ }
+ else{
+  noTone(pinAltavoz);
+ }
+ 
+ ```
+ 
+ Probad diferentes valores de frecuencia y límites del valor de ejeY para ver que todo funciona bien y haced variaciones. 
