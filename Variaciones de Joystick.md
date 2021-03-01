@@ -260,3 +260,6 @@ En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz.
  ```
  
  Probad diferentes valores de frecuencia y límites del valor de ejeY para ver que todo funciona bien y haced variaciones. 
+ 
+ 
+ ## Proyecto de Joystick que cuando llegas a un punto determinado suena una pequeña nota en el altavoz de forma continuada
