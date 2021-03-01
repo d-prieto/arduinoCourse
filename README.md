@@ -7,9 +7,12 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 
 ## Clases
 
+
 * Clase de millis (variaciones del contador) https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
 * Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
+
+* Clase de variaciones del Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Variaciones%20de%20Joystick.md
 
 
 ## Repositorios de alumnos 
