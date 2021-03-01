@@ -57,6 +57,10 @@ Tengo un led conectado en este caso al pin 9. Podeis usar este pin o cualquier o
 
 ![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick%20con%201%20led.JPG)
 
+Esta es la variación que me ha pasado Alba 
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick%20Alba%20con%20led.JPG)
+
 ### Software 
 
 Aquí explicaré primero las cosas que voy a añadir y cómo queda el código al final. 
