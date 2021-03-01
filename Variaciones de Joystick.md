@@ -187,4 +187,16 @@ El valor máximo que puede alcanzar el ejeX es 1023, con lo cual hasta entonces 
 
 ## Proyecto de Joystick que cuando llegas a un punto determinado suena una pequeña nota en el altavoz
 
-(lo desarrollo ahora mañana mientras probéis los anteriores)
+Este proyecto sigue avanzando a partir del anterior. Vamos a utilizar aquí el eje Y, mientras el eje X sigue encendiendo el led. 
+
+### Hardware
+
+Añado el altavoz al pin 8. En este caso para poner el altavoz basta conectarlo si necesidad de resistencia. Uno de los palos del altavoz se conecta al pin 8 y otro se conecta al Ground.
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/Joystick%20con%20Led%20y%20altavoz.JPG)
+
+En mi caso como el piezo se lo dejé a alguien que se le rompió el suyo, utilizo otro altavoz conectándolo con un cable negro al Ground y con un cable blanco al pin 8. 
+
+Dejo igualmente el Joystick y el led donde estaban dado que siguen funcionando en este sketch. 
+
+### Software
