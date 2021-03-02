@@ -237,12 +237,12 @@ Aquí no necesitamos cambiar el setup
 
 #### Loop 
 
-Aquí sí vamos a tocar la parte de la condición del if. **El resto quedará igual**
+Aquí sí vamos a tocar la parte de la condición del if. **El resto quedará igual**. Lo que vamos a hacer es que vaya sólo entre determinados valores. Para ello usaremos el operador Y (&&). Por ejemplo vamos a hacer que sea mayor que 100 y menor que 200 para que encienda el LED de la siguiente forma:
 
 
 ```C++
  
- if (valorEjeX > 800){
+ if (valorEjeX > 100 && valorEjeX < 200){
   digitalWrite(pinLed, HIGH);
  }
  else{
