@@ -172,13 +172,13 @@ Aquí no necesitamos cambiar el setup
 En este caso vamos a hacer algo similar que con el botón. Leeremos el sensor del ejeX. Pero en vez de usar DigitalRead, usaremos AnalogRead. DigitalRead (lectura digital traduciendo literalmente) nos da valores de 0 o 1. Pero AnalogRead nos da valores entre 0 y 1023. En este caso el valor 0 es el extremo izquierdo y el valor 1023 es el valor moviendo hasta el tope de la derecha el Joystick. 
 
 ```C++
- valorEjeX= analogRead(pinBoton);
+ valorEjeX = analogRead(pinEjeX);
 ```
 
 Después haremos un control de flujo (if) con la condición de que supere una determinada franja. En este caso he puesto el valor 800, pero **podéis probar otros valores para ver qué ocurre**. 
 
 ```C++
- valorEjeX = analogRead(pinEjeX);
+ 
  if (valorEjeX > 800){
   digitalWrite(pinLed, HIGH);
  }
