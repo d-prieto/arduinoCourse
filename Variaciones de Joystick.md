@@ -283,6 +283,14 @@ Aquí sí caben modificaciones en la parte del hardware y en la descripción.
 ```
 #### Variables
 
+Tenemos un pin nuevo así que una nueva constante para ese pin:
+
+```C++
+
+ const int pinAltavoz = 8; 
+```
+
+
 Añadimos la variable para guardar el eje Y. Le llamaremos valorEjeY, como la del ejeX podrá guardar valores entre 0 y 1023
 
 ```C++
