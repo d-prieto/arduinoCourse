@@ -51,6 +51,10 @@ void loop() {
 
 ## Proyecto de LED que se enciende cuando pulsas el botón del joystick 
 
+### Nombre del archivo proyecto 
+
+JoystickVariacion01
+
 ### Hardware
 
 Tengo un led conectado en este caso al pin 9. Podeis usar este pin o cualquier otro. 
@@ -134,6 +138,10 @@ Este proyecto parte del mismo Hardware que tenemos pero vamos a revisar uno de l
 
 Este proyecto parte del anterior así que iré mencionando las cosas que hay que **añadir** y también las que hay que **quitar**. Seguiremos el mismo orden que en el ejercicio anterior, salvo por la parte de que el código completo no estará disponible. (Se pide que los alumnos seáis capaces de montarlo por vuestra parte a partir de los anteriores ejercicios y subirlo correctamente). 
 
+### Nombre del archivo proyecto 
+
+JoystickVariacion02
+
 ### Hardware
 
 Utiliza el mismo Hardware que el ejercicio anterior. 
@@ -188,6 +196,60 @@ Después haremos un control de flujo (if) con la condición de que supere una de
 ```
 
 El valor máximo que puede alcanzar el ejeX es 1023, con lo cual hasta entonces podemos ir viendo su sensibilidad. Con 800 el intervalo es bastante sensible. Y he visto que poniendo ==1023 no llego al tope físico del mecanismo sino que lo supero. 
+
+## Proyecto de Joystick que solo ilumina cuando llega a un rango determinado del eje X 
+
+Aquí hemos mirado un umbral (que sea superior a 800) pero vamos a hacer otra variación donde vamos a incluir 2 límites. Un mínimo y un máximo
+
+### Nombre del archivo proyecto 
+
+JoystickVariacion03
+
+
+### Hardware
+
+Utiliza el mismo Hardware que el ejercicio anterior. 
+
+### Software 
+
+#### Inicio del programa
+
+Primero añadiré a la plantilla mi nombre, la fecha y lo que hace el programa. En este caso "determinado rango de valores" sigue siendo válido. Así que lo podemos dejar. 
+
+```C++
+/*
+*  Documentación del programa 
+*  Autore: David Prieto
+*  Fecha: 28/02/2021
+*  Código referencia: https://github.com/d-prieto/arduinoCourse/blob/main/JoystickLedButton.ino
+*  Descripción del programa: Este programa cuando el Joystick llega a determinado rango de valores en el EjeX ilumina el LED. Si no, el led se encuentra apagado. 
+*  Hardware necesario: Joystick. Led. Resistencia de 220 Ohms
+*/
+```
+
+#### Variables
+
+No tenemos nada nuevo respecto al ejercicio anterior. 
+
+#### Setup 
+
+Aquí no necesitamos cambiar el setup
+
+#### Loop 
+
+Aquí sí vamos a tocar la parte de la condición del if. **El resto quedará igual**
+
+
+```C++
+ 
+ if (valorEjeX > 800){
+  digitalWrite(pinLed, HIGH);
+ }
+ else{
+  digitalWrite(pinLed, LOW);
+ }
+```
+
 
 ## Proyecto de Joystick que cuando llegas a un punto determinado suena una pequeña nota en el altavoz
 
