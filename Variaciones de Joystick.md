@@ -502,7 +502,11 @@ Para tener un número pseudo-al azar tenemos la función random(numero). Esto te
 
 Para que el número funcione realmente al azar y no exactamente igual cada vez que se ejecuta, necesito una pequeño truco que es usar una "semilla de azar" que tomo de un pin que no tiene nada conectado. 
 
-Si no la pones la lína de randomSeed cada vez que ejecutas el arduino comienza en el mismo punto ¡y no es cuestión en este caso!. 
+Si no la pones la lína de randomSeed cada vez que ejecutas el arduino comienza en el mismo punto ¡y no es cuestión en este caso!
+
+Al final vamos a tener un punto en el plano de esta forma:
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/JoystickCoordenadas02.jpg)
 
 NOTA: SI HAS COPIADO HASTA AQUÍ, HAZ UN COMPILADO DE PRUEBA PARA VERIFICAR QUE NO HAYA LLAVES DE MÁS O DE MENOS PORQUE LA COSA A PARTIR DE AQUÍ SE COMPLICA. 
 
@@ -547,6 +551,10 @@ void leerDatos() {
 
 Esto lo hemos visto varias veces en clase. Para los valores del potenciómetro necesitamos valores entre 0 y 1023 así que estamos obligados a usar analogRead en los respectivos pines y lo guardamos en variables para poder consultarlo después. 
 
+En este caso lo que hacemos es pintar en un plano cartesiano donde está nuestro Joystick. Aquí podéis ver cómo funciona:
+
+![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/JoystickCoordenadas01.jpg)
+
 EstadoBoton, por otro lado está conectado a un pin digital con lo cual no puede ejecutar analogRead (y tampoco tiene sentido que lo haga) así que usa digitalRead que le dará valores de 0 o 1. 
 
 Por úlitmo y como novedad añadimos aquí lo de mirar la hora en "tiempoActual". 
@@ -562,7 +570,9 @@ Por úlitmo y como novedad añadimos aquí lo de mirar la hora en "tiempoActual"
  */
 void procesarDatos() {
 ```
-Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro potenciómetro un punto en el eje X e Y (es bastante sensible al respecto
+ ##### Cálculo de la distancia
+
+Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro potenciómetro un punto en el eje X e Y (es bastante sensible al respecto) y necesitamos saber cómo de lejos está del tesoro (punto objetivo) que también tiene coordenadas x e y y están guardadas en distanciaX y distanciaY respectivamente. 
 
 ```C++
   // distancia entre dos puntos de coordenadas X Y 
@@ -577,7 +587,37 @@ Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro
   long distanciaReal = sqrt(sq(distanciaX)+sq(distanciaY));
   Serial.print("Distancia: ");
   Serial.println(distanciaReal);
+  
+  
+  ```
+ Para saber esa distancia tenemos que usar _matemáticas_ y teorema de Pitágoras. Ahora mismo ya tenemos dos puntos en el plano y queremos averiguar la Distancia Real 
+ 
+ ![](https://raw.githubusercontent.com/d-prieto/arduinoCourse/main/Images/JoystickCoordenadas03.jpg)
+ 
+ Esto se puede asimilar a esta imagen
+ 
+ ![](https://www.superprof.es/apuntes/wp-content/uploads/2019/07/distancia-entre-dos-puntos.gif)
+ 
+ Y aquí hay una clase explicándolo con videos 
+ 
+ http://matematicatuya.com/GRAFICAecuaciones/S1a.html
+ 
+ Lo que nos importa aquí ¿Cómo hacemos cuadrados o raices cuadradas en arduino? Pues para ello tenemos 2 funciones y 1 aviso. 
+ 
+ El aviso es que vamos a tener números mayores a 32 000 por lo que necesitamos sí o sí utilizar long en vez de ints (que por eso defino la distanciaX y la distanciaY como long y no como int)
+ 
+ La primera función que tenemos que usar es **sq(numero)** para multiplicar un número por sí mismo. Square significa cuadrado en inglés y el diminutivo es sq así que lo que hace es elevar al cuadrado el número que le lancemos. 
+ 
+ Y la segunda función que tenemos que utilizar es **sqrt(numero)** para obtener la raíz cuadrada de un número. En inglés raíz cuadrada es square root, así que la abreviación es sqrt. 
+ 
+ Ya tenemos la distancia ¡yay! Ahora vamos a hacer los cambios en función de esa distancia. 
+ 
+ ##### Decisiones en función de la distancia
+ 
+ Lo que se viene es un if else muy largo. Hemos hecho uno parecido con el teclado. 
 
+  
+```C++
   if (distanciaReal >= 1000)
   {
     intervalo = 2000;
