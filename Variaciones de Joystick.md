@@ -347,7 +347,7 @@ Utiliza el mismo Hardware que el ejercicio anterior. El joystick, un led y el al
 
 ### Software
 
-Aquí hablaremos de las diferentes partes
+Aquí hablaremos de las diferentes partes del código. Iremos fragmento por fragmento. Y como utilizaremos otras funciones además de setup y loop las trataremos en apartados diferentes. 
 
 #### Inicio del programa
 
@@ -372,18 +372,10 @@ Aquí sí caben modificaciones en la  descripción
  ```
  #### Variables
  
+ Comenzamos con las variables de los pines (que, si usáis una plantilla ya deberían estar escritas)
+ 
   ```C++
-  
-   ```
- 
- #### Setup 
-
-
-
-#### Loop 
- 
-
-//Includes
+  //Includes
 
 //Definiciones de constantes de pines
 const int pinBoton = 3; 
@@ -392,6 +384,26 @@ const int pinEjeX = A0;
 
 const int pinLed = 9;
 const int pinAltavoz = 8;
+
+   ```
+   
+   Después vienen las variables globales, que son unas cuantas y las podemos dividir en categorías 
+     ```C++
+   
+int valorEjeX = 0;
+int valorEjeY = 0;
+int estadoBoton = 0;
+
+int frecuenciaNota = 440; 
+int duracionSonido = 250;
+    ```  
+ 
+ #### Setup 
+
+
+
+#### Loop 
+ 
 
 //Definición de variables globales 
 
