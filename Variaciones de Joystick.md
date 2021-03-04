@@ -510,7 +510,15 @@ NOTA: SI HAS COPIADO HASTA AQUÍ, HAZ UN COMPILADO DE PRUEBA PARA VERIFICAR QUE 
 
 
 #### Loop 
- 
+
+Como otras veces, cuando tenemos un programa muy complejo, hacemos que haga sólo 3 líneas muy sencillas llamando a otras funciones que iremos desarrollando. 
+
+Leer datos leerá los datos de los sensores (el joystick) y mirará la hora. 
+
+Después procesa los datos y toma decisiones respecto a lo que ha leído. 
+
+Por último decide si ejecutar luces y sonidos o no. 
+
 ```C++
 void loop() {
   leerDatos();
@@ -519,9 +527,11 @@ void loop() {
 
 }  
 ```
-
+Luego como es un bucle, vuelve a repetir el proceso. Ahora explicaremos cada una de las funciones
 
  #### leerDatos()
+ 
+ De todas las funciones esta es la más sencilla. Sólo tiene 4 líneas de instrucciones. No obstante también ayuda que tenga sus líneas de documentación. 
 
 ```C++
 /*
@@ -535,13 +545,26 @@ void leerDatos() {
 }
 ```
 
+Esto lo hemos visto varias veces en clase. Para los valores del potenciómetro necesitamos valores entre 0 y 1023 así que estamos obligados a usar analogRead en los respectivos pines y lo guardamos en variables para poder consultarlo después. 
+
+EstadoBoton, por otro lado está conectado a un pin digital con lo cual no puede ejecutar analogRead (y tampoco tiene sentido que lo haga) así que usa digitalRead que le dará valores de 0 o 1. 
+
+Por úlitmo y como novedad añadimos aquí lo de mirar la hora en "tiempoActual". 
+
 
  #### procesarDatos()
+ 
+ La función procesarDatos es la más grande de las funciones e, incluso se podría haber subdividido en 2 funciones (calcularDistancia y decidirIntervalo) pero aquí está todo unido. Tiene al inicio la cabecera. 
+ 
 ```C++
 /*
  * Esta función procesa los datos leídos y cambia las variables para la ejecución de sonidos. 
  */
 void procesarDatos() {
+```
+Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro potenciómetro un punto en el eje X e Y (es bastante sensible al respecto
+
+```C++
   // distancia entre dos puntos de coordenadas X Y 
   
   long distanciaX = valorEjeX - xObjetivo;
