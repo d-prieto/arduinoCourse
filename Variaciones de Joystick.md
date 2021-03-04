@@ -334,11 +334,17 @@ En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz.
  
 ## El rádar 
 
+![](https://image.freepik.com/vector-gratis/radar-verde-sonar-submarino-armada-objetivos-ilustracion-pantalla-navegacion_53562-8136.jpg)
+
 Este es un pequeño juego. Cada vez que iniciamos se generan unas coordenadas de un "tesoro" y tenemos que encontrar el punto dentro del joystick. Cuando lo encontramos suena una melodía de éxito y vuelve a empezar. 
 
 Este proyecto es GRANDE así que lo vamos a hacer juntos. Esta versión funciona aunque es incompleta. La idea es ir haciéndola juntos poco a poco. 
  
 En este aso voy a colocar TODO el código por partes, incluyendo las de ejercicios anteriores. 
+
+### Nombre del proyecto
+
+Radar.ino
  
  
 ### Hardware
@@ -411,30 +417,28 @@ int xObjetivo = 0;
 int yObjetivo = 0;
 ```  
 
-Estas son las variables que tienen que ver con si se ejecuta el sonido o no (si toca silencio o toca que el altavoz suene) y cuanto es el intervalo entre los pitidos del rádar
+Estas son las variables que tienen que ver con si se ejecuta el sonido o no (si toca silencio o toca que el altavoz suene) y cuanto es el intervalo entre los pitidos del rádar. La idea es que si ejecutarSonido es false no pita y si ejecutarSonido es true. 
 
 ```C++
 int intervalo = 2000;
 bool ejecutarSonido = false;
 ```  
- 
- #### Setup 
 
+Estas son las variables del tiempo. Las hemos usado en los proyectos de millis(), las he traducido al castellano y en vez de currentTime tenemos tiempoActual y tiempoAnterior.
 
-
-#### Loop 
- 
-
- 
-
-int intervalo = 2000;
-bool ejecutarSonido = false;
-
+```C++
 unsigned long tiempoActual = 0;
 unsigned long tiempoAnterior = 0;
+```  
+
+Por último tenemos las variables de la melodía de la victoria. Estas son del ejercicio de melodía. Igualmente con las otras he traducido los nombre de las variables al castellano. En vez de melody tenemos frecuenciasMelodia[] y en vez de notesDuration tenemos duracionDeNotas[].
+
+Si queréis consultarlo está aquí el ejercicio de la melodía:
+
+https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody
 
 //melodia de victoria
-
+```C++
 int frecuenciasMelodia[] = {
   262, 196, 196, 220, 196, 0, 247, 262
 };
@@ -442,19 +446,38 @@ int frecuenciasMelodia[] = {
 int duracionDeNotas[] = {
   4, 8, 8, 4, 4, 4, 4, 4
 };
+```  
+Otro cambio que he realizado es, para no hacerlo aún más largo, en vez de utilizar definiciones de notas, he colocado su valor. He sustituido los  NOTE_C4 por 262 y así sucesivamente. 
 
+ 
+ #### Setup 
 
+Este Setup tiene partes que conocemos: 
+
+```C++
 void setup() {
 //inicializaciones
   pinMode(pinBoton, INPUT);
   pinMode(pinLed, OUTPUT);
   digitalWrite(pinBoton, HIGH);
   Serial.begin(9600);
-//código que se ejecuta solo una vez. Calibraciones  
+```
+  Donde inicializamos el botón, el led e iniciamos el Serial y después una parte nueva:
+  
+  
+```C++
   iniciarDatosAleatorios();
-}
+} //llave del setup
 
-/*
+```
+  Esto llamará a una nueva función que vamos a definir ahora. Esta ocurrirá una primera vez con el setup, pero también se le llamará desde el loop cuando toquemos la melodía. 
+  
+ #### iniciarDatosAleatorios()
+
+Estas funciones ahora van a ir introducidas por una pequeña documentación que explican qué hacen. Esto forma parte de la documentación y es importante para programas complejos como este para llevarlo bien. 
+
+```C++
+ /*
  * Esta función crea el punto objetivo del juego
  */
 void iniciarDatosAleatorios() {
@@ -472,6 +495,41 @@ void iniciarDatosAleatorios() {
 
   
 }
+```
+Esta función asigna a dos variables globales (xObjetivo e Yobjetivo) un punto al azar entre 0 y 1023. Después las enseña en pantalla.
+
+Para tener un número pseudo-al azar tenemos la función random(numero). Esto te devuelve un número al azar entre 0 y el número que le digas. Puede tirar un dado de seis caras, lanzar una moneda, coger una carta de la baraja. Lo que haga falta. Aunque tiene algunos límites. 
+
+Para que el número funcione realmente al azar y no exactamente igual cada vez que se ejecuta, necesito una pequeño truco que es usar una "semilla de azar" que tomo de un pin que no tiene nada conectado. 
+
+Si no la pones la lína de randomSeed cada vez que ejecutas el arduino comienza en el mismo punto ¡y no es cuestión en este caso!. 
+
+NOTA: SI HAS COPIADO HASTA AQUÍ, HAZ UN COMPILADO DE PRUEBA PARA VERIFICAR QUE NO HAYA LLAVES DE MÁS O DE MENOS PORQUE LA COSA A PARTIR DE AQUÍ SE COMPLICA. 
+
+
+
+
+#### Loop 
+ 
+
+ 
+
+
+
+
+
+
+void setup() {
+//inicializaciones
+  pinMode(pinBoton, INPUT);
+  pinMode(pinLed, OUTPUT);
+  digitalWrite(pinBoton, HIGH);
+  Serial.begin(9600);
+//código que se ejecuta solo una vez. Calibraciones  
+  iniciarDatosAleatorios();
+}
+
+
 
 void loop() {
   leerDatos();
