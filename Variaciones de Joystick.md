@@ -332,10 +332,26 @@ En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz.
  Probad diferentes valores de frecuencia y límites del valor de ejeY para ver que todo funciona bien y haced variaciones. 
  
  
- ## El rádar 
+## El rádar 
+
+Este es un pequeño juego. Cada vez que iniciamos
+
+Este proyecto es GRANDE así que lo vamos a hacer juntos. Esta versión funciona aunque es incompleta. La idea es ir haciéndola juntos poco a poco. 
  
- Este proyecto es GRANDE así que lo vamos a hacer juntos. Esta versión funciona aunque es incompleta. La idea es ir haciéndola juntos poco a poco. 
+En este aso voy a colocar TODO el código por partes, incluyendo las de ejercicios anteriores. 
  
+ 
+### Hardware
+
+Utiliza el mismo Hardware que el ejercicio anterior. El joystick, un led y el altavoz. Si no estuviera el altavoz igualmente el Led hace el mismo efecto. 
+
+### Software
+
+Aquí hablaremos de las diferentes partes
+
+#### Inicio del programa
+
+Aquí sí caben modificaciones en la  descripción
  
  ```C++
  /*
@@ -345,12 +361,27 @@ En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz.
 *  Código referencia: https://github.com/d-prieto/arduinoCourse/edit/main/Variaciones%20de%20Joystick.md
 *  Descripción del programa:
 *  Este programa crea un punto al azar. Cuando vas acercando el joystick al punto va acercándose la distancia de los puntos
-*  
+*  suena con más frecuencia.
 *  Llegado un determinado punto toca una melodía de éxito y se reinicia. 
 *  
 *  
 *  Hardware necesario: Joystick. Led. Resistencia de 220 Ohms
 */
+
+
+ ```
+ #### Variables
+ 
+  ```C++
+  
+   ```
+ 
+ #### Setup 
+
+
+
+#### Loop 
+ 
 
 //Includes
 
