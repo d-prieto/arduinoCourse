@@ -511,33 +511,19 @@ NOTA: SI HAS COPIADO HASTA AQUÍ, HAZ UN COMPILADO DE PRUEBA PARA VERIFICAR QUE 
 
 #### Loop 
  
-
- 
-
-
-
-
-
-
-void setup() {
-//inicializaciones
-  pinMode(pinBoton, INPUT);
-  pinMode(pinLed, OUTPUT);
-  digitalWrite(pinBoton, HIGH);
-  Serial.begin(9600);
-//código que se ejecuta solo una vez. Calibraciones  
-  iniciarDatosAleatorios();
-}
-
-
-
+```C++
 void loop() {
   leerDatos();
   procesarDatos();
   ejecutarSonidosYLuces();
 
 }  
+```
 
+
+ #### leerDatos()
+
+```C++
 /*
  * Esta función sólo lee datos y los guarda en variables. 
  */
@@ -547,7 +533,11 @@ void leerDatos() {
   estadoBoton = digitalRead(pinBoton);
   tiempoActual = millis();
 }
+```
 
+
+ #### procesarDatos()
+```C++
 /*
  * Esta función procesa los datos leídos y cambia las variables para la ejecución de sonidos. 
  */
@@ -594,7 +584,14 @@ void procesarDatos() {
     secuenciaFinal();
   }
 }
+```
 
+
+#### ejecutarSonidosYLuces()
+```C++
+/*
+ * Esta función en función de las variables anteriores enciende el led y activa el led 
+ */
 void ejecutarSonidosYLuces() {
   if (tiempoActual - tiempoAnterior >= intervalo) {
      tiempoAnterior = tiempoActual;
@@ -609,7 +606,13 @@ void ejecutarSonidosYLuces() {
      }
   }
 }
+```
 
+#### secuenciaFinal()
+```C++
+/*
+ * Esta función toca una melodía y vuelve a iniciar las coordenadas.  
+ */
 void secuenciaFinal() {
   
   for (int estaNota = 0; estaNota < 8; estaNota++) {
