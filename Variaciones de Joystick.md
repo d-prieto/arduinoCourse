@@ -334,7 +334,7 @@ En el caso de que no estemos, voy a poner un "noTone" para silenciar el altavoz.
  
 ## El rádar 
 
-Este es un pequeño juego. Cada vez que iniciamos
+Este es un pequeño juego. Cada vez que iniciamos se generan unas coordenadas de un "tesoro" y tenemos que encontrar el punto dentro del joystick. Cuando lo encontramos suena una melodía de éxito y vuelve a empezar. 
 
 Este proyecto es GRANDE así que lo vamos a hacer juntos. Esta versión funciona aunque es incompleta. La idea es ir haciéndola juntos poco a poco. 
  
@@ -387,16 +387,36 @@ const int pinAltavoz = 8;
 
    ```
    
-   Después vienen las variables globales, que son unas cuantas y las podemos dividir en categorías 
-     ```C++
+Después vienen las variables globales, que son unas cuantas y las podemos dividir en categorías 
+
+Estas son las variables para guardar los valores del Joystick de entrada. En esta primera versión no uso estado botón. En versiones posteriores sí la utilizaré. 
+```C++
    
 int valorEjeX = 0;
 int valorEjeY = 0;
 int estadoBoton = 0;
+```  
 
+Estas son las variables donde guardo la frecuencia del sonido del rádar y cuanto dura. Se pueden modificar a vuestro gusto para que el radar sea más agudo, grave, dure más o dure menos.
+
+```C++
 int frecuenciaNota = 440; 
 int duracionSonido = 250;
-    ```  
+```  
+
+Estas son las coordenadas del "tesoro" que tenemos que encontrar. Comienzan en 0 pero se inician aleatoriamente en la función _iniciarDatosAleatorios()_
+
+```C++
+int xObjetivo = 0;
+int yObjetivo = 0;
+```  
+
+Estas son las variables que tienen que ver con si se ejecuta el sonido o no (si toca silencio o toca que el altavoz suene) y cuanto es el intervalo entre los pitidos del rádar
+
+```C++
+int intervalo = 2000;
+bool ejecutarSonido = false;
+```  
  
  #### Setup 
 
@@ -405,20 +425,9 @@ int duracionSonido = 250;
 #### Loop 
  
 
-//Definición de variables globales 
-
-int valorEjeX = 0;
-int valorEjeY = 0;
-int estadoBoton = 0;
-
-int frecuenciaNota = 440; 
-int duracionSonido = 250;
  
-int xObjetivo = 0;
-int yObjetivo = 0;
 
 int intervalo = 2000;
-bool encenderLuz = false;
 bool ejecutarSonido = false;
 
 unsigned long tiempoActual = 0;
