@@ -602,6 +602,11 @@ Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro
  
  http://matematicatuya.com/GRAFICAecuaciones/S1a.html
  
+ Al final tenemos esta fórmula de aquí
+ 
+ ![imagen](https://user-images.githubusercontent.com/60569015/109956735-4eb7fb00-7ce4-11eb-9a3f-b6da212f9105.png)
+
+ 
  Lo que nos importa aquí ¿Cómo hacemos cuadrados o raices cuadradas en arduino? Pues para ello tenemos 2 funciones y 1 aviso. 
  
  El aviso es que vamos a tener números mayores a 32 000 por lo que necesitamos sí o sí utilizar long en vez de ints (que por eso defino la distanciaX y la distanciaY como long y no como int)
@@ -609,6 +614,8 @@ Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro
  La primera función que tenemos que usar es **sq(numero)** para multiplicar un número por sí mismo. Square significa cuadrado en inglés y el diminutivo es sq así que lo que hace es elevar al cuadrado el número que le lancemos. 
  
  Y la segunda función que tenemos que utilizar es **sqrt(numero)** para obtener la raíz cuadrada de un número. En inglés raíz cuadrada es square root, así que la abreviación es sqrt. 
+ 
+ Al final escribimos:   long distanciaReal = sqrt(sq(distanciaX)+sq(distanciaY)); para hacerlo. Son muchos paréntesis pero ahí está todo. Raíz de suma de cuadrados. 
  
  Ya tenemos la distancia ¡yay! Ahora vamos a hacer los cambios en función de esa distancia. 
  
@@ -649,12 +656,27 @@ Después comenzamos con la distancia entre 2 puntos. Nosotros tenemos en nuestro
 }
 ```
 
+Si la distancia es mayor que 1000 el intervalo de los pitidos es de 2000 milisegundos, 2 segundos. Si te acercas se va reduciendo hasta un mínimo de 100 milisegundos. Si consigues acercarte a menos de 50 activiará "secuenciaFinal" que definiremos más tarde. 
+
+
+
 
 #### ejecutarSonidosYLuces()
+
+Después de que decida cual es el intervalo actual, y con la hora ya medida en leerDatos, vamos a revisar ahora si encendemos el led y pitamos o no. Como otras veces, comenzamos con la pequeña documentación de la propia función. 
+
 ```C++
 /*
  * Esta función en función de las variables anteriores enciende el led y activa el led 
  */
+```
+_Siempre documentación, nunca indocumentación_
+
+Luego comenzamos con unas líneas muy similares a lo que hemos hecho en el ejercicio de los leds. Si ha pasado el tiempo del intervalo activamos o desactivamos el sonido. Para hacer una vez cada cosa, utilizamos la variable "ejecutarSonido". 
+
+Si ejecutarSonido coincide que es true, pitamos y encendemos el led. Si resulta que no lo es, pues apagamos el led y el altavoz. 
+
+```C++
 void ejecutarSonidosYLuces() {
   if (tiempoActual - tiempoAnterior >= intervalo) {
      tiempoAnterior = tiempoActual;
@@ -672,6 +694,9 @@ void ejecutarSonidosYLuces() {
 ```
 
 #### secuenciaFinal()
+
+Por último tenemos la secuancia final, en el caso de que nos hayamos acercado lo suficiente al tesoro (a una distancia de 50 o menos). Comenzamos con la documentación. 
+
 ```C++
 /*
  * Esta función toca una melodía y vuelve a iniciar las coordenadas.  
