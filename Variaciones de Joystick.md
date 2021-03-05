@@ -824,3 +824,18 @@ Como extra se puede añadir en la secuencia final, pero no queda con mucho flow,
 
 ![imagen](https://user-images.githubusercontent.com/60569015/110100476-c0567e80-7da2-11eb-9d27-06022ad85085.png)
 
+### Difícil Variación del caminante
+
+Ahora mismo el punto del tesoro es un punto del joystick, pero en cualquier videojuego nosotros nos movemos en un "espacio virtual" y los joysticks nos permiten movernos en ese espacio. Vamos a intentarlo nosotros. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110101176-8c2f8d80-7da3-11eb-8537-e1b0aac24f09.png)
+
+_imagen de videojuego_
+
+Para ello necesitamos saber "la posición de quien juega" y esa posición se modificará cuando movemos el joystick. Si movemos hacia arriba el joystick se moverá "arriba" en el plano del juego ficticio (que no vemos porque no tenemos una pantalla). Pero si dejamos el Joystick detenido el jugador se mantendrá en esa posición. 
+
+Así que para ello vamos a desdoblar lo de la distancia para añadir las variables de "posicionJugadore" (posición de la persona que juega) que tendrán una X y una Y. Después tendremos que revisar cómo cambia el joystick esa posición. 
+
+El resto del programa se mantendrá tal cual de momento. 
+
+A ello! 
