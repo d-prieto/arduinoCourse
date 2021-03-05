@@ -838,4 +838,50 @@ Así que para ello vamos a desdoblar lo de la distancia para añadir las variabl
 
 El resto del programa se mantendrá tal cual de momento. 
 
-A ello! 
+¡A ello!
+
+#### Variables 
+
+Tenemos que añadir posicionJugadoreX y posicionJugadoreY como variables globales. 
+
+
+```C++
+int posicionJugadoreX = 0;
+int posicionJugadoreY = 0;
+```
+
+#### procesarDatos()
+
+Aquí vamos a cambiar las variables de distanciaX e Y para que las calcule a partir de posicionJugadoreX. Y como calcular la posición es complicado, la voy a sacar en calcularPosicionJugadore() para que funcione aparte y tener todo un poco más ordenado. Me queda esto:
+
+```C++
+void procesarDatos() {
+  // distancia entre dos puntos de coordenadas X Y 
+  calcularPosicionJugadore();
+  long distanciaX = posicionJugadoreX - xObjetivo;
+  Serial.print("Distancia en el eje X: ");
+  Serial.println(distanciaX);
+  long distanciaY = posicionJugadoreY - yObjetivo;
+  Serial.print("Distancia en el eje Y: ");
+  Serial.println(distanciaY);
+  //esto es la raiz cuadrada de la suma de los cuadrados de diferencia. 
+  long distanciaReal = sqrt(sq(distanciaX)+sq(distanciaY));
+  Serial.print("Distancia: ");
+  Serial.println(distanciaReal);
+
+  if (distanciaReal >= 1000)
+  {
+    intervalo = 2000;
+  }
+  else if (distanciaReal >= 850 && distanciaReal < 1000) {
+    intervalo = 1500;
+  }
+  .
+  .
+  .
+```
+Sólo he cambiado 3 líneas, cómo calcula la distanciaX, la distanciaY. El resto de _magia matemática_ la dejo tal cual porque como funciona no hace falta tocar nada. 
+
+#### calcularPosicionJugadore()
+
+Esta es una nueva función, así que debemos utilizar una documentación para ver lo que hace. 
