@@ -885,3 +885,6 @@ Sólo he cambiado 3 líneas, cómo calcula la distanciaX, la distanciaY. El rest
 #### calcularPosicionJugadore()
 
 Esta es una nueva función, así que debemos utilizar una documentación para ver lo que hace. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110103482-4922e980-7da6-11eb-92ee-f92c9c2ac846.png)
+
