@@ -787,3 +787,10 @@ En este caso tras darle vueltas he utilizado estos valores y voy a probarlos: 10
 
 ![imagen](https://user-images.githubusercontent.com/60569015/110087687-40291c80-7d94-11eb-92db-e35775d3b996.png)
 
+Comprobado y funcionan bastante bien, ahora es más entretenido la verdad con estos ajustes. 
+
+### Añadir un LED para que alterne con el otro
+
+El que haya un led está guay, pero con dos y que se alternen podría estar aún mejor. En este caso sí necesitaríamos añadir un poco más de hardware. 
+
+Incluiríamos un led con su resistencia a otro pin (por ejemplo el 7) y tendríamos que añadir sus respectivas variables (sigue)
