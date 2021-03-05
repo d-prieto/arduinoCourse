@@ -886,5 +886,84 @@ Sólo he cambiado 3 líneas, cómo calcula la distanciaX, la distanciaY. El rest
 
 Esta es una nueva función, así que debemos utilizar una documentación para ver lo que hace. 
 
-![imagen](https://user-images.githubusercontent.com/60569015/110103482-4922e980-7da6-11eb-92ee-f92c9c2ac846.png)
+Este código es largo. Por un lado clasifica X, si es menor que determinado ángulo modifica la posición en X 20, si no solo 10 ó 5 y en el caso de que el joystick esté en reposo, no se mueve. 
 
+Luego hace el mismo tedioso proceso en Y. 
+
+Por último revisa si X o Y se han salido del rango entre 0 y 1023. En ese caso les cambia de lado (si te sales por el lado de 1023 vuelves a llegar al 0 y si te sales por el lado del 0 vuelves al lado de 1023. 
+
+Así que nuestro "San Andreas" es un espacio con menos detalle que los juegos de Rockstar y es un espacio entre 0 y 1023 en cada eje, pero cuando pasamos de un lado aparecemos por el otro por arte de magia. 
+
+Este es el código:
+
+```C++
+/*
+ * A partir de la posición del Joystick modifica la posición de le jugadore. Si sube en X, sube en X, si sube en Y, sube en Y.
+ * Si se pasa de los límites, sale por el otro lado creando un espacio "infinito"
+ */
+void calcularPosicionJugadore() {
+     //calculo de X
+  if (valorEjeX >= 1000)
+  {
+    posicionJugadoreX = posicionJugadoreX + 20;
+  }
+  else if (valorEjeX >= 750 && valorEjeX < 1000) {
+    posicionJugadoreX = posicionJugadoreX + 10;
+  }
+  else if (valorEjeX >= 600 && valorEjeX < 750) {
+    posicionJugadoreX = posicionJugadoreX + 5;
+  } 
+  else if (valorEjeX >= 250 && valorEjeX < 400) {
+    posicionJugadoreX = posicionJugadoreX - 5;
+  }
+  else if (valorEjeX >= 23 && valorEjeX < 250) {
+    posicionJugadoreX = posicionJugadoreX - 10;
+  } 
+  else if (valorEjeX < 23){
+    posicionJugadoreX = posicionJugadoreX - 20;
+  }
+  // Cálculo de Y
+  if (valorEjeY >= 1000)
+  {
+    posicionJugadoreY = posicionJugadoreY + 20;
+  }
+  else if (valorEjeY >= 750 && valorEjeY < 1000) {
+    posicionJugadoreY = posicionJugadoreY + 10;
+  }
+  else if (valorEjeY >= 600 && valorEjeY < 750) {
+    posicionJugadoreY = posicionJugadoreY + 5;
+  } 
+  else if (valorEjeY >= 250 && valorEjeY < 400) {
+    posicionJugadoreY = posicionJugadoreY - 5;
+  }
+  else if (valorEjeY >= 23 && valorEjeY < 250) {
+    posicionJugadoreY = posicionJugadoreY - 10;
+  } 
+  else if (valorEjeY < 23){
+    posicionJugadoreY = posicionJugadoreY - 20;
+  }
+  // reasignación de Y en caso de que se salga de los valores entre 0 y 1023
+  if (posicionJugadoreY > 1023){
+    posicionJugadoreY = 0;
+  }
+  if (posicionJugadoreX < 0){
+    posicionJugadoreY = 1023;
+  }  
+  // reasignación de X en caso de que se salga de los valores entre 0 y 1023
+  if (posicionJugadoreX > 1023){
+    posicionJugadoreX = 0;
+  }
+  if (posicionJugadoreX < 0){
+    posicionJugadoreX = 1023;
+  }  
+  // impresión de valores para revisar 
+    Serial.print("Posicion de le jugadore en el eje X: ");
+  Serial.println(posicionJugadoreX);
+  long distanciaY = posicionJugadoreY - yObjetivo;
+  Serial.print("Posicion de le jugadore en el eje Y: ");
+  Serial.println(posicionJugadoreY);
+}
+
+```
+
+Lo he probado y ahora es bastante difícil ¿qué tal si le añado unos LEDS direccionales para saber hacia donde tengo que ir?
