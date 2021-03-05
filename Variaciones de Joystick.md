@@ -797,6 +797,30 @@ Incluiríamos un led con su resistencia a otro pin (por ejemplo el 7) y tendría
 
 #### Hardware 
 
+Añadimos otro pin, en este caso lo pongo en el pin 10 y lo conecto a Ground utilizando una resistencia. Como otros leds que hemos montado 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110099963-30b0d000-7da2-11eb-9a03-2d41c97535ce.png)
+
+
 #### Software 
 
+Aquí tenemos que intervenir en 3 partes. Por un lado añadir la constante del pin que utilicemos en las variables 
+
+
+![imagen](https://user-images.githubusercontent.com/60569015/110100093-50e08f00-7da2-11eb-860c-91aa34959a3f.png)
+
+
+En el Setup también tenemos que añadir el pinMode, si no lo hacemos el LED va a brillar muy muy flojito. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110100191-6a81d680-7da2-11eb-8c81-5e6f1c54978d.png)
+
+Por último en ejecutarSonidosYLuces añado las líneas para hacer que se encienda cuando el otro esté apagado y al revés. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110100353-98671b00-7da2-11eb-82b8-b5c18df9cf0f.png)
+
+Donde pone digitalWrite(pinLed2, HIGH o LOW) son las líneas nuevas (ojo que hay 2)
+
+Como extra se puede añadir en la secuencia final, pero no queda con mucho flow, la verdad. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/110100476-c0567e80-7da2-11eb-9d27-06022ad85085.png)
 
