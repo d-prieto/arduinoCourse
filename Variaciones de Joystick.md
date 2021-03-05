@@ -753,3 +753,32 @@ Por otro lado, si cambiamos el número de notas y en vez de poner 8 ponemos más
 
 
 Donde poner estaNota<8 necesitariamos colocar el número de notas que tuviéramos o deseásemos tocar. 
+
+### Medias 
+
+Estas requieren un poco más de trabajo, o al menos más delicado. 
+
+#### Cambiar la dificultad del juego 
+
+Ahora mismo el juego es bastante difícil. Esto es porque hay que ser muy preciso con el Joystick para hacerlo preciso. Esto se puede hacer de varias aproximaciones. La primera es modificar en "procresarDatos()" los umbrales de los if/else. Estos de aquí:
+
+![imagen](https://user-images.githubusercontent.com/60569015/110086965-55517b80-7d93-11eb-8d2e-4a299039d37d.png)
+
+Ahora mismo los umbrales son:
+ ```
+1000
+800
+600
+400
+200
+120
+75
+y 
+50
+ ```
+Estos son los umbrales a partir de los cuales se cambia el intervalo. Cada uno de estos números está escrito dos veces (en la horquilla inferior de una condición y en la horquilla superior del siguiente). 
+
+En este caso tras darle vueltas he utilizado estos valores y voy a probarlos: 1000,850,700,550,400,225,150,100
+
+![imagen](https://user-images.githubusercontent.com/60569015/110087687-40291c80-7d94-11eb-92db-e35775d3b996.png)
+
