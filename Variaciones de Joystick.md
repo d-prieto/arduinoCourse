@@ -718,3 +718,38 @@ void secuenciaFinal() {
 }
 
  ```
+ 
+ ## Retoques al radar 
+ 
+ Hoy viernes vamos a hacer retoques al rádar
+ 
+ ### Fáciles:
+ 
+ #### Frecuencia del rádar
+ 
+ Primero voy a retocar del rádar el pitido del radar para que sea constante, pero tenga otro tono. Para ello ubico, en la zona de variables este fragmento de código:
+ 
+ ![imagen](https://user-images.githubusercontent.com/60569015/110084159-e9b9df00-7d8f-11eb-87d2-97ffe610434f.png)
+
+Y ahí cambio la "frecuenciaNota", por un valor más alto o más bajo a 440, bastante agudo sería 880, un valor grave sería 262. 
+
+ #### Hacer que el led se encienda cuando ocurre el silencio y viceversa. 
+ 
+ Esto lo que hace es que si el audio suena el led esté apagado. Y si el audio le toca silencio, el led se encienda. Localizo este fragmento en ejecutarSonidosYLuces()
+ 
+ ![imagen](https://user-images.githubusercontent.com/60569015/110084695-8b413080-7d90-11eb-99ad-10be1569cad3.png)
+
+y done pone digitalWrite(pinLed, HIGH) pongo digitalWrite(pinLed, LOW) y viceversa. 
+
+ #### Modificar la melodía del final
+ 
+ En este caso, tendríamos que retocar 3 cosas. Por un lado las variables frecuenciasMelodia[] y duracionDeNotas[] que están el las variables
+
+![imagen](https://user-images.githubusercontent.com/60569015/110085100-fdb21080-7d90-11eb-97db-006fe7e3f1fa.png)
+
+Por otro lado, si cambiamos el número de notas y en vez de poner 8 ponemos más o menos tendremos que actualizar en el bucle for de secuencia final el número de notas que vayamos a tocar
+
+![imagen](https://user-images.githubusercontent.com/60569015/110085302-38b44400-7d91-11eb-8392-fdd5e15e1712.png)
+
+
+Donde poner estaNota<8 necesitariamos colocar el número de notas que tuviéramos o deseásemos tocar. 
