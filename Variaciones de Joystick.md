@@ -793,4 +793,10 @@ Comprobado y funcionan bastante bien, ahora es más entretenido la verdad con es
 
 El que haya un led está guay, pero con dos y que se alternen podría estar aún mejor. En este caso sí necesitaríamos añadir un poco más de hardware. 
 
-Incluiríamos un led con su resistencia a otro pin (por ejemplo el 7) y tendríamos que añadir sus respectivas variables (sigue)
+Incluiríamos un led con su resistencia a otro pin (por ejemplo el 7) y tendríamos que añadir sus respectivas variables (sigue). También se podría utilizar el led integrado del pin 13, pero no tiene tanto flow como un led al lado del otro que tenemos. 
+
+#### Hardware 
+
+#### Software 
+
+
