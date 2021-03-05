@@ -1,5 +1,10 @@
 # Variaciones de Joystick
 
+## Índice 
+
+* [Rádar](#el-rádar)
+* [Variaciones del rádar](#retoques-al-radar)
+
 ## Introducción
 
 Para ahondar más en el sensor que hemos estado trabajando (el Joystick) vamos a hacer una serie de variaciones. Comenzaremos por las más sencillas y la más compleja que quiero hacer es un pequeño juego donde hay que detectar una posición determinada al azar con el joystick usando sonido. 
