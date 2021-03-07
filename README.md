@@ -11,8 +11,8 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 * Clase de millis (variaciones del contador) https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
 * Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
-
 * Clase de variaciones del Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Variaciones%20de%20Joystick.md
+* Clase del Rádar https://github.com/d-prieto/arduinoCourse/blob/main/Radar%20y%20variaciones.md#proyecto-de-r%C3%A1dar-y-variaciones
 
 
 ## Repositorios de alumnos 
@@ -87,14 +87,16 @@ Variaciones:
 ### Proyectos con Joystick 
 
 * Proyecto de Joystick de prueba
-
+* Proyecto de Joystick que enciende un led
+* Proyecto de Joystick que toca una nota
+* Proyecto de Rádar
 
 ### Proyectos en curso 
 
 * Proyectos con operadores booleanos
-* Proyecto de Joystick que enciende un led
-* Proyecto de Joystick que toca música
 * Proyecto de pantalla LCD
+* Proyecto de Zoótropo
+* Proyecto de sensor capacitivo
 
 ### Tareas pendientes semana 22 a 26 de febrero 
 
@@ -106,6 +108,11 @@ Variaciones:
 
 **Importante utilizar la documentación incluyendo vuestro nombre, fecha y descripción en el código** 
 
+### Tareas pendientes semana 1 a 5 de marzo
+
+- Variaciones de Joystick. Variación con Led, Variación con altavoz. Variación con LED y altavoz 
+- Radar. Variaciones del Rádar 
+- Ordenar repositorio
 
 
 ## Referencia
