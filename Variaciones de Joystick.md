@@ -1,9 +1,6 @@
 # Variaciones de Joystick
 
-## Índice 
 
-* [Rádar](#el-rádar)
-* [Variaciones del rádar](#retoques-al-radar)
 
 ## Introducción
 
