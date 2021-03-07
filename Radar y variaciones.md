@@ -1,4 +1,11 @@
- 
+# Proyecto de rádar y variaciones
+
+Aquí nos centraremos en un proyecto algo complejo y lo trocearemos para entenderlo mejor. Un rádar. 
+
+## Índice 
+
+* [Rádar](#el-rádar)
+* [Variaciones del rádar](#retoques-al-radar)
  
 ## El rádar 
 
