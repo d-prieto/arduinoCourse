@@ -124,6 +124,9 @@ void loop() {
 
 ### Añade un dibujo propio o un emoji 
 
+Esto viene de aquí:
+https://www.arduino.cc/en/Reference/LiquidCrystalCreateChar
+
 ```C++
 
 #include <LiquidCrystal.h>
@@ -151,8 +154,11 @@ void loop() {}
 
 Haced un dibujo usando los caracteres existentes y ponedlo en el LCD
 
-### Mostrar una imagen y los segundos
+### Mostrar un texto y los segundos
 
+Esto viene de aquí
+
+https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld/
 
 ```C++
 /*
