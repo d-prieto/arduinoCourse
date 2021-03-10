@@ -91,10 +91,15 @@ Variaciones:
 * Proyecto de Joystick que toca una nota
 * Proyecto de Rádar
 
+### Proyectos con pantalla LCD
+
+* Proyecto de pantalla LCD (Bola de cristal)
+* Proyecto de pantalla LCD (loro)
+
 ### Proyectos en curso 
 
 * Proyectos con operadores booleanos
-* Proyecto de pantalla LCD
+
 * Proyecto de Zoótropo
 * Proyecto de sensor capacitivo
 
@@ -113,6 +118,14 @@ Variaciones:
 - Variaciones de Joystick. Variación con Led, Variación con altavoz. Variación con LED y altavoz 
 - Radar. Variaciones del Rádar 
 - Ordenar repositorio
+
+### Tareas pendientes semana 8 a 12 de marzo
+
+- Proyecto de Media y mínima de notas
+- Proyecto de LCD (variación de bola de cristal)
+- Recuperación de proyectos de operadores y Joystick 
+- Ordenar repositorio 
+
 
 
 ## Referencia
