@@ -13,6 +13,7 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 * Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
 * Clase de variaciones del Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Variaciones%20de%20Joystick.md
 * Clase del Rádar https://github.com/d-prieto/arduinoCourse/blob/main/Radar%20y%20variaciones.md#proyecto-de-r%C3%A1dar-y-variaciones
+* Clase de ejemplos de la pantalla LCD https://github.com/d-prieto/arduinoCourse/blob/main/pantalla-lcd.md#variaciones-y-enlaces-con-la-pantalla-lcd
 
 
 ## Repositorios de alumnos 
@@ -124,6 +125,7 @@ Variaciones:
 - Proyecto de Media y mínima de notas
 - Proyecto de LCD (variación de bola de cristal)
 - Recuperación de proyectos de operadores y Joystick 
+- Dibujar algo en LCD
 - Ordenar repositorio 
 
 
