@@ -14,6 +14,7 @@ Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino
 * Clase de variaciones del Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Variaciones%20de%20Joystick.md
 * Clase del Rádar https://github.com/d-prieto/arduinoCourse/blob/main/Radar%20y%20variaciones.md#proyecto-de-r%C3%A1dar-y-variaciones
 * Clase de ejemplos de la pantalla LCD https://github.com/d-prieto/arduinoCourse/blob/main/pantalla-lcd.md#variaciones-y-enlaces-con-la-pantalla-lcd
+* Clase de ejemplos de problemas de cara al examen
 
 
 ## Repositorios de alumnos 
