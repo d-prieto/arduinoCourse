@@ -104,6 +104,47 @@ Variaciones:
 * Proyecto de Zoótropo
 * Proyecto de sensor capacitivo
 
+## Tareas ordenadas por fecha
+
+### Tareas pendientes semana 18-22 de enero
+
+- Proyecto "escribir mi nombre en morse"
+- Proyecto "semáforo con botón"
+
+### Tareas pendientes semana 25-29 de enero
+
+- Proyectos de Serial. Serial.print y Serial.read
+- Proyecto de lector analógico de temperatura.
+- Proyecto de fotoresistores con led RGB
+
+
+### Tareas pendientes semana 1-5 de febrero
+
+ * Proyecto de sensores luz RGB con calibración
+ *   Proyecto de sensores luz RGB con calibración y Kill Switch (botón desactivador)
+* Proyecto de melodía con kill switch
+* Proyecto con diferentes melodías
+* Proyecto de generador de melodías aleatorias
+* Proyecto de Theremin Térmico
+
+
+### Tareas pendientes semana 8- 12 de febrero
+
+* Proyecto de medidor de estado de ánimo con potenciador.
+* Proyecto de potenciador para añadir y quitar luz a un led RGB
+* Proyecto de potenciador para añadir y quitar tono a un altavoz. (con Kill switch)
+* Proyecto de sensor de temperatura para girar un servomotor
+* Proyecto de botones que giran un servomotor
+* Proyecto de un ciclo automatizado activado por botones
+* Inicio de proyecto de teclado con 4 botones y una única entrada analógica.
+* Proyecto de teclado con 4 botones. Variaciones sencillas.
+* Sensor de inclinación y proyecto de reloj de arena digital. 
+
+### Tareas pendientes semana 15- 19 de febrero
+
+- Proyecto de molinillo (y variaciones incluyendo potenciómetro)
+- Variaciones del reloj de arena digital
+
 ### Tareas pendientes semana 22 a 26 de febrero 
 
 - Proyecto de teclado que da diferentes velocidades al motor 9V
@@ -126,8 +167,16 @@ Variaciones:
 - Proyecto de LCD (variación de bola de cristal)
 - Recuperación de proyectos de operadores y Joystick 
 - Dibujar algo en LCD
+- Realizar los ejemplos de variaciones de pantalla LCD (emoticono, serial.read, dibujo propio, escribir los segundos)
+- Proyecto de media aritmética y mínimo y proyecto de media ponderada. 
+- Proyecto de sensor capacitivo. 
 - Ordenar repositorio 
 
+### Tareas pendientes semana 19 a 25 de marzo
+
+- Zoótropo 
+- Cerradura
+- Sensor de temperatura
 
 
 ## Referencia
