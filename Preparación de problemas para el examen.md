@@ -50,3 +50,10 @@ Utilizando el potenciómetro y un botón deseo que si el potenciómetro está en
 
 Utilizando el potenciómetro y el led2 deseo que si muevo el potenciómetro el led tenga más o menos potencia. 
 
+### Ejemplo 05 
+
+Utilizando dos botones y un led necesito que uno de ellos (led1) se encienda durante 5 segundos y se apague (para nunca más volver a encenderse). Después necesito que si pulsas los dos botones a la vez se encienda el led 2. Si no están pulsados los dos a la vez el led 2 estará apagado. 
+
+### Ejemplo 06
+
+Con el potenciómetro, un botón y un led. Se desea que el led se encienda si bien el botón está pulsado o si el potenciómetro pasa del valor 512. 
