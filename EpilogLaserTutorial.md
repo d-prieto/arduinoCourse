@@ -45,7 +45,28 @@ In this document I differenciate engraving and cutting between how the laser ope
 * Raster/engraving is the movement that the laser does scanlines and in some points it makes goes on and some points it goes off
 * Vector/cutting is the movment that the laser goes following the lines of the drawing. 
 
-Both could (depending on the parameters and material cut through or just carve the stock. 
+Both could (depending on the parameters and material cut through or just carve the stock). 
+
+How they work. 
+
+If you set to raster. The file is going to be just engraved with the power and the speed you have set up. That means that it's going to rasterize everything you could make and send it to the laser. The good thing that this works with raster files (yay). The bad thing is that if you're looking for a cut or a vector engraving this won't do. 
+
+If you set the vector it's going to try to look for the vectors and cut through with the parameters. I don't use usually this setting. I prefer to go to advanced and set the colour mapping to fix the power and the speed for each file. 
+
+### Known materials 
+
+3 mm acrylic. 7 Speed, 100 power, Max. Frecuency. 
+5 mm acrylic. 9 Speed, 100 power, Max. Frecuency. 2 passes
+
+### Inkscape 
+
+Inkscape has _problems_ dealing with the epilog. It's better to print PDF and then send the pdfs to cut. When you set the settings for the epilog, they reset themselves to the default. So apart of doing default engraving is hard to work with it. 
+
+### PDF 
+
+You can work with PDF made with inkscape, Rhinoceros, Illustrator or the program of your choice. 
+
+To cut the lines have to be less than 0.2 thick to cut through
 
 ### Rhino case 
 
