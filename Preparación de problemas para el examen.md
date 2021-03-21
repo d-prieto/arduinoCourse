@@ -255,6 +255,82 @@ Para cambiar de modo bastará pulsar una vez el botón (no hace falta mantener p
 
 Aquí necesitamos el Kill Switch. 
 
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: Con un botón(botón2) y un led (led1) se necesita un programa que vaya cambiando en bucle
+entre los siguientes modos:
+-Encender un led
+-Que ese led parpadeé
+-Que ese led parpadee más rápido
+-Apagar el led.
+Para cambiar de modo bastará pulsar una vez el botón (no hace falta mantener pulsado)
+
+ * Hardware utlizado: Un botón y un led
+ * 
+ */
+
+const int pinLed1 = 2;
+const int pinBoton2 = 6;
+
+
+int estadoBoton2;
+bool estaSiendoPulsadoElBoton = false;
+
+int estadoLed = 0;
+// 0 apagado
+// 1 encendido
+// 2 parpadeo largo
+// 3 parpadeo corto
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinBoton2, INPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  checkButton();
+  if (estadoLed == 0){
+    digitalWrite(pinLed1, LOW);
+  }
+  if (estadoLed == 1){
+    digitalWrite(pinLed1, HIGH);
+  }
+  if (estadoLed == 2){
+    digitalWrite(pinLed1, HIGH);
+    delay(800);
+    digitalWrite(pinLed1, LOW);
+    delay(800);
+  }  
+  if (estadoLed == 3){
+    digitalWrite(pinLed1, HIGH);
+    delay(200);
+    digitalWrite(pinLed1, LOW);
+    delay(200);
+  } 
+}
+
+void checkButton() {
+  // leemos el botón y lo guardamos en switchtate
+  estadoBoton2 = digitalRead(switchPin);
+  if (estadoBoton2 == HIGH) {
+    if (estaSiendoPulsadoElBoton == false) {
+      estadoLed ++;
+      //reinicio de estadoLed
+      if(estadoLed > 3){
+        estadoLed =0;
+      }
+      estaSiendoPulsadoElBoton = true;
+    }
+  }
+  else {
+    estaSiendoPulsadoElBoton = false;
+  }
+}
+```
 
 
 
