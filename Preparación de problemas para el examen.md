@@ -317,3 +317,46 @@ Después, cuando un botón (cualquiera de ellos) está pulsado, el potenciómetr
 potencia del led. En caso de que ningún botón esté pulsado, el led quedará con la potencia
 establecida por el potenciómetro la última vez que se hayan pulsado.
 
+
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: 
+Utilizando los 2 botones, un potenciómetro y un led (led2) 
+se necesita que el led se encienda. Después, cuando un botón 
+(cualquiera de ellos) está pulsado, el potenciómetro variará la potencia del led.
+En caso de que ningún botón esté pulsado, el led quedará con la potencia establecida
+por el potenciómetro la última vez que se hayan pulsado.
+ * Hardware utlizado: 2 botón (Pull-up), 1 potenciómetro, 1 led
+ * 
+ */
+ 
+
+const int pinLed2 = 3;
+const int pinBoton1 = 5;
+const int pinBoton2 = 6;
+const int pinPotenciometro = A0;
+
+int estadoBoton1;
+int estadoBoton2;
+int valorPotenciometro;
+
+void setup() {
+  pinMode(pinLed2, OUTPUT);
+  pinMode(pinBoton1, INPUT);
+  pinMode(pinBoton2, INPUT);
+  digitalWrite(pinLed2, HIGH);
+  
+}
+
+void loop() {
+  estadoBoton1 = digitalRead(pinBoton1);
+  estadoBoton2 = digitalRead(pinBoton2);  
+  valorPotenciometro = analogRead(valorPotenciometro);
+  if (estadoBoton1 == HIGH || estadoBoton2 == HIGH){
+   //divido entre cuatro porque analogRead va de 0 a 1023 y el analogWrite de 0 a 255
+   analogWrite(pinLed2, valorPotenciometro/4);
+  }
+}
+```
