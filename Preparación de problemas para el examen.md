@@ -57,3 +57,45 @@ Utilizando dos botones y un led necesito que uno de ellos (led1) se encienda dur
 ### Ejemplo 06
 
 Con el potenciómetro, un botón y un led. Se desea que el led se encienda si bien el botón está pulsado o si el potenciómetro pasa del valor 512. 
+
+## Resolución del examen 
+
+Para resolver el examen lo primero que me he hecho es una plantilla. Se puede hacer sin ésta pero a mí me sirve para ordenarme mejor. Pongo la documentación al principio del propio código. 
+
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: Plantilla para hacer los ejercicios del examen.
+ * A partir de esto tengo configurado los pines y podré comenzar a hacer lo que se pida.
+ * Hardware utlizado: Ninguno
+ * 
+ */
+
+const int pinLed1 = 2;
+const int pinLed2 = 3;
+const int pinLed3 = 4;
+const int pinBoton1 = 5;
+const int pinBoton2 = 6;
+const int pinPotenciometro = A0;
+
+int estadoBoton1;
+int estadoBoton2;
+int valorPotenciometro;
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinLed2, OUTPUT);
+  pinMode(pinLed3, OUTPUT);
+  pinMode(pinBoton1, INPUT);
+  pinMode(pinBoton2, INPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  
+
+}
+
+```
