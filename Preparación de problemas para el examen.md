@@ -62,6 +62,8 @@ Con el potenciómetro, un botón y un led. Se desea que el led se encienda si bi
 
 Para resolver el examen lo primero que me he hecho es una plantilla. Se puede hacer sin ésta pero a mí me sirve para ordenarme mejor. Pongo la documentación al principio del propio código. 
 
+Los problemas, como siempre tienen varias opciones posibles. 
+
 ```C++
 /*
  * Nombre: David Prieto
@@ -99,3 +101,86 @@ void loop() {
 }
 
 ```
+### Problema 1
+
+Utilizando 3 leds(led1, led2, led3) se necesita que el programa que haga lo siguiente. Tras
+conectarlo, durante 1 segundo habrá un led (el led3) que se encenderá una única vez. Después
+los 3 leds se encenderán y apagarán estando 1 segundo encendidos y 0,5 segundos apagados
+en bucle.
+
+Este requiere un digitalWrite en el setup y luego la intermitencia en el loop. 
+
+
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: Utilizando 3 leds(led1, led2, led3) se necesita que el programa que haga lo siguiente. 
+ * Tras conectarlo, durante 1 segundo habrá un led (el led3) que se encenderá una única vez. 
+Después los 3 leds se encenderán y apagarán estando 1 segundo encendidos y 0,5 segundos apagados en bucle.
+ * Hardware utlizado: 3 Leds
+ * 
+ */
+
+const int pinLed1 = 2;
+const int pinLed2 = 3;
+const int pinLed3 = 4;
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinLed2, OUTPUT);
+  pinMode(pinLed3, OUTPUT);
+
+  digitalWrite(pinLed3, HIGH);
+  delay(1000);
+  digitalWrite(pinLed3, LOW);
+}
+
+void loop() {
+  digitalWrite(pinLed1, HIGH);
+  digitalWrite(pinLed2, HIGH);
+  digitalWrite(pinLed3, HIGH);
+  delay(1000);
+  digitalWrite(pinLed1, LOW);
+  digitalWrite(pinLed2, LOW);
+  digitalWrite(pinLed3, LOW);
+  delay(500);
+}
+
+```
+
+### Problema 2
+
+Utilizando un potenciómetro, un botón (botón1) y un led (led1) se necesita que el led se
+encienda únicamente si el valor del potenciómetro es 0 y el botón está pulsado. En el resto de
+los casos el led estará apagado.
+
+### Problema 3
+
+Con dos botones (botón 1 y botón 2) y un led(led1) se necesita que el led se encienda durante
+1 segundo una única vez después de conectar el Arduino. Después, necesito que se encienda el
+led si pulso cualquiera de los dos botones. En otro caso el led estará apagado.
+
+### Problema 4
+Con un botón(botón2) y un led (led1) se necesita un programa que vaya cambiando en bucle
+entre los siguientes modos:
+-Encender un led
+-Que ese led parpadeé
+-Que ese led parpadee más rápido
+-Apagar el led.
+Para cambiar de modo bastará pulsar una vez el botón (no hace falta mantener pulsado)
+
+### Problema 5
+
+Con un potenciómetro y un botón (botón 1), se necesita que si el potenciómetro tiene valores
+menores a 200 o superiores a 1000 se mande un mensaje al ordenador. Si el botón está
+pulsado será “Activando botón”. Si no está pulsado el mensaje será “Botón no activado”. Si el
+potenciómetro no tiene esos valores no ocurrirá nada. Los mensajes los mandará cada 0,2
+segundos.
+
+### Problema 6
+Utilizando los 2 botones, un potenciómetro y un led (led2) se necesita que el led se encienda.
+Después, cuando un botón (cualquiera de ellos) está pulsado, el potenciómetro variará la
+potencia del led. En caso de que ningún botón esté pulsado, el led quedará con la potencia
+establecida por el potenciómetro la última vez que se hayan pulsado.
+
