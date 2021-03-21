@@ -176,8 +176,7 @@ Variaciones:
 ### Tareas pendientes semana 19 a 25 de marzo
 
 - Zoótropo 
-- Cerradura
-- Sensor de temperatura
+
 
 
 ## Referencia
