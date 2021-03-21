@@ -155,11 +155,94 @@ Utilizando un potenciómetro, un botón (botón1) y un led (led1) se necesita qu
 encienda únicamente si el valor del potenciómetro es 0 y el botón está pulsado. En el resto de
 los casos el led estará apagado.
 
+Este ejercicio se resuelve leyendo los dos inputs y para decidir cuando encender el led (enchegar como dice Javi) se puede utilizar un único if con el operador Y. 
+
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: Utilizando un potenciómetro, un botón (botón1) y un led (led1) se necesita que el led se
+encienda únicamente si el valor del potenciómetro es 0 y el botón está pulsado. En el resto de
+los casos el led estará apagado.
+ * Hardware utlizado: 1 botón (Pull-up), 1 potenciómetro y 1 led
+ * 
+ */
+
+const int pinLed1 = 2;
+const int pinBoton1 = 5;
+const int pinPotenciometro = A0;
+
+int estadoBoton1;
+int valorPotenciometro;
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinBoton1, INPUT);
+}
+
+void loop() {
+  estadoBoton1 = digitalRead(pinBoton1);
+  valorPotenciometro = analogRead(valorPotenciometro);
+  if (valorPotenciometro == 0 && estadoBoton1 == HIGH){
+    digitalWrite(pinLed1, HIGH);
+  }
+  else {
+    digitalWrite(pinLed1, LOW);
+  }
+}
+```
+
+
 ### Problema 3
 
 Con dos botones (botón 1 y botón 2) y un led(led1) se necesita que el led se encienda durante
 1 segundo una única vez después de conectar el Arduino. Después, necesito que se encienda el
 led si pulso cualquiera de los dos botones. En otro caso el led estará apagado.
+
+Este ejercicio para su resolución necesita de nuevo colocar algo en el setup. Después es similar al segundo ejercicio, leyendo los 2 botones y se puede resolver con un operador || (operador "o").
+
+```C++
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: Con dos botones (botón 1 y botón 2) y un led(led1) se necesita que el led se encienda durante
+1 segundo una única vez después de conectar el Arduino. Después, necesito que se encienda el
+led si pulso cualquiera de los dos botones. En otro caso el led estará apagado.
+
+ * Hardware utlizado: 2 botones y 1 led
+ * 
+ */
+
+const int pinLed1 = 2;
+const int pinBoton1 = 5;
+const int pinBoton2 = 6;
+
+int estadoBoton1;
+int estadoBoton2;
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinBoton1, INPUT);
+  pinMode(pinBoton2, INPUT);
+
+ 
+  digitalWrite(pinLed1, HIGH);
+  delay(1000);
+  digitalWrite(pinLed1, LOW);
+}
+
+void loop() {
+    estadoBoton1 = digitalRead(pinBoton1);
+    estadoBoton2 = digitalRead(pinBoton2);
+    if (estadoBoton1 == HIGH || estadoBoton2 == HIGH){
+      digitalWrite(pinLed1, HIGH);
+    }
+    else {
+      digitalWrite(pinLed1, LOW);
+   }
+
+}
+```
 
 ### Problema 4
 Con un botón(botón2) y un led (led1) se necesita un programa que vaya cambiando en bucle
@@ -170,6 +253,11 @@ entre los siguientes modos:
 -Apagar el led.
 Para cambiar de modo bastará pulsar una vez el botón (no hace falta mantener pulsado)
 
+Aquí necesitamos el Kill Switch. 
+
+
+
+
 ### Problema 5
 
 Con un potenciómetro y un botón (botón 1), se necesita que si el potenciómetro tiene valores
@@ -177,6 +265,51 @@ menores a 200 o superiores a 1000 se mande un mensaje al ordenador. Si el botón
 pulsado será “Activando botón”. Si no está pulsado el mensaje será “Botón no activado”. Si el
 potenciómetro no tiene esos valores no ocurrirá nada. Los mensajes los mandará cada 0,2
 segundos.
+
+Aquí tenemos dos ifs anidados. Si el potenciómetro está en la posición adecuada, revisamos el estado del botón para mandar un mensaje o el otro. Añado comentarios a las líneas de las llaves. 
+
+```C++
+
+/*
+ * Nombre: David Prieto
+ * Fecha: 21 de Marzo de 2021
+ * Descripcíón del programa: 
+Con un potenciómetro y un botón (botón 1), se necesita que si el potenciómetro tiene valores
+menores a 200 o superiores a 1000 se mande un mensaje al ordenador. Si el botón está
+pulsado será “Activando botón”. Si no está pulsado el mensaje será “Botón no activado”. Si el
+potenciómetro no tiene esos valores no ocurrirá nada. Los mensajes los mandará cada 0,2
+segundos.
+ * Hardware utlizado: 1 botón (Pull-up), 1 potenciómetro
+ * 
+ */
+
+const int pinBoton1 = 5;
+const int pinPotenciometro = A0;
+
+int estadoBoton1;
+int valorPotenciometro;
+
+void setup() {
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinBoton1, INPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  estadoBoton1 = digitalRead(pinBoton1);
+  valorPotenciometro = analogRead(valorPotenciometro);
+  if (valorPotenciometro < 200 ||valorPotenciometro > 1000){
+    if (estadoBoton1 == HIGH) {
+      Serial.println(“Activando botón”);
+    } //llave del if del botón
+    else{ //caso de que el botón no esté pulsado
+      Serial.println(“Botón no activado”);
+    }
+    delay(200);
+  } // llave del if del potenciómetro
+} //llave del loop
+```
 
 ### Problema 6
 Utilizando los 2 botones, un potenciómetro y un led (led2) se necesita que el led se encienda.
