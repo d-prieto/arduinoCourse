@@ -1,9 +1,11 @@
 # Curso de arduino 
-Arduino examples with comments in Spanish for teaching
+
 
 ## Objetivo
 
 Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino. Expanden el contenido del Starter kit para detallar más. 
+
+Después se amplia en el siguiente evaluación para algunos de los alumnos. 
 
 ## Clases
 
