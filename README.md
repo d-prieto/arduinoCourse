@@ -76,18 +76,13 @@ Aquí están el resto de repositorios de los alumnos del curso 2020-2021
 
 * Proyecto de medidor de estado de ánimo con potenciador. 
 
-![imagen](https://user-images.githubusercontent.com/60569015/117957567-7e096a80-b31a-11eb-87c7-87298528a576.png)
+![imagen](https://user-images.githubusercontent.com/60569015/117959281-2409a480-b31c-11eb-948b-d9ca76805f5f.png)
 
-_imagen de Bangwei_
+_imagen de Wesley_
 
 
 * Proyecto de potenciador para añadir y quitar luz a un led RGB
 * Proyecto de potenciador para añadir y quitar tono a un altavoz. (con Kill switch)
-
-![imagen](https://user-images.githubusercontent.com/60569015/117957707-a002ed00-b31a-11eb-84ae-845beb7751dc.png)
-
-_imagen de Wesley / Bangwei
-
 * Proyecto de sensor de temperatura para girar un servomotor
 * Proyecto de botones que giran un servomotor
 * Proyecto de un ciclo automatizado activado por botones
