@@ -1,6 +1,14 @@
 # Curso de arduino 
 
 
+## Índice
+
+* [Enlace a clases](https://github.com/d-prieto/arduinoCourse#clases)
+* [Repositorios de alumnos](https://github.com/d-prieto/arduinoCourse#repositorios-de-alumnos)
+* [Proyectos realizados](https://github.com/d-prieto/arduinoCourse#proyectos-realizados)
+* [Referencia](https://github.com/d-prieto/arduinoCourse#referencia)
+
+
 ## Objetivo
 
 Este es un repositorio con ejemplos sencillos para explicar conceptos de arduino. Expanden el contenido del Starter kit para detallar más. 
@@ -21,7 +29,9 @@ Después se amplia en el siguiente evaluación para algunos de los alumnos.
 
 ## Repositorios de alumnos 
 
-Aquí están el resto de repositorios de los alumnos 
+### Curso 2020-2021
+
+Aquí están el resto de repositorios de los alumnos del curso 2020-2021
 
 * [Marc](https://github.com/marc125678/Arduino)
 * [Marcos](https://github.com/marcoshens/arduinoo)
@@ -65,8 +75,19 @@ Aquí están el resto de repositorios de los alumnos
 ### Proyectos con servomotor o potenciómetro
 
 * Proyecto de medidor de estado de ánimo con potenciador. 
+
+![imagen](https://user-images.githubusercontent.com/60569015/117957567-7e096a80-b31a-11eb-87c7-87298528a576.png)
+
+_imagen de Bangwei_
+
+
 * Proyecto de potenciador para añadir y quitar luz a un led RGB
 * Proyecto de potenciador para añadir y quitar tono a un altavoz. (con Kill switch)
+
+![imagen](https://user-images.githubusercontent.com/60569015/117957707-a002ed00-b31a-11eb-84ae-845beb7751dc.png)
+
+_imagen de Wesley / Bangwei
+
 * Proyecto de sensor de temperatura para girar un servomotor
 * Proyecto de botones que giran un servomotor
 * Proyecto de un ciclo automatizado activado por botones
@@ -82,6 +103,11 @@ Variaciones:
 ### Proyectos de motores de corriente contínua 9V
 
 * Proyecto de molinillo
+
+![imagen](https://user-images.githubusercontent.com/60569015/117957371-4d293580-b31a-11eb-90ca-6260b144c445.png)
+
+_imagen de Bangwei_
+
 * Proyecto de molinillo con potenciómetro
 * Proyecto que inicia una melodía antes de ejecutarse (Naira)
 * Proyecto de molinillo con secuencia diferida (Ramón)
@@ -90,6 +116,9 @@ Variaciones:
 
 ### Proyectos con Joystick 
 
+![imagen](https://user-images.githubusercontent.com/60569015/117958200-14d62700-b31b-11eb-994e-c4c5b5c3e3ff.png)
+
+
 * Proyecto de Joystick de prueba
 * Proyecto de Joystick que enciende un led
 * Proyecto de Joystick que toca una nota
@@ -97,13 +126,20 @@ Variaciones:
 
 ### Proyectos con pantalla LCD
 
+![imagen](https://user-images.githubusercontent.com/60569015/117958562-6e3e5600-b31b-11eb-91a3-825233dda0ba.png)
+
+_Imagen de Víctor_
+
 * Proyecto de pantalla LCD (Bola de cristal)
 * Proyecto de pantalla LCD (loro)
 
-### Proyectos en curso 
+### Otros proyectos
+
+![imagen](https://user-images.githubusercontent.com/60569015/117958372-3afbc700-b31b-11eb-81ef-e26f01d34a93.png)
+
+_Imagen de Wesley_
 
 * Proyectos con operadores booleanos
-
 * Proyecto de Zoótropo
 * Proyecto de sensor capacitivo
 
@@ -188,4 +224,4 @@ Variaciones:
 
 * [Plantilla](https://github.com/d-prieto/arduinoCourse/blob/main/plantilla.ino)
 
-
+* [Proyecto de videojuego speed runner Javi Reverte](https://github.com/reverte04/PROYECTO-VIDEOJUEGO/blob/main/proceso%20de%20proyecto.md)
