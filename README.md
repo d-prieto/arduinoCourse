@@ -3,10 +3,10 @@
 
 ## Índice
 
-* [Enlace a clases](https://github.com/d-prieto/arduinoCourse#clases)
-* [Repositorios de alumnos](https://github.com/d-prieto/arduinoCourse#repositorios-de-alumnos)
-* [Proyectos realizados](https://github.com/d-prieto/arduinoCourse#proyectos-realizados)
-* [Referencia](https://github.com/d-prieto/arduinoCourse#referencia)
+* [Enlace a clases](#clases)
+* [Repositorios de alumnos](#repositorios-de-alumnos)
+* [Proyectos realizados](#proyectos-realizados)
+* [Referencia](#referencia)
 
 
 ## Objetivo
