@@ -17,6 +17,9 @@ Después se amplia en el siguiente evaluación para algunos de los alumnos.
 
 ## Clases
 
+* Presentación del curso de Arduino y documentación: https://docs.google.com/presentation/d/1jhVhtS2GHWQiYLOHMPgljkE0tGWDIzyUHgVSrWyMQh4/edit?usp=sharing
+* Páginas de proyectos: https://docs.google.com/presentation/d/1of6-TS1-f_qSxIbFIUKpEw_Nlkyb9vA7z5vIk0pWWF4/edit?usp=sharing
+
 
 * Clase de millis (variaciones del contador) https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
