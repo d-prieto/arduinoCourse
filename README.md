@@ -24,7 +24,7 @@ Después se amplia en el siguiente evaluación para algunos de los alumnos.
 
 * Clase de millis (variaciones del contador) https://github.com/d-prieto/arduinoCourse/blob/main/Variantes%20de%20contador.md#variantes-de-contador
 * Clase de Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Joystick.md
-* Clase de operaores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
+* Clase de operadores https://github.com/d-prieto/arduinoCourse/blob/main/Clase_de_Operadores.md
 * Clase de variaciones del Joystick https://github.com/d-prieto/arduinoCourse/blob/main/Variaciones%20de%20Joystick.md
 * Clase del Rádar https://github.com/d-prieto/arduinoCourse/blob/main/Radar%20y%20variaciones.md#proyecto-de-r%C3%A1dar-y-variaciones
 * Clase de ejemplos de la pantalla LCD https://github.com/d-prieto/arduinoCourse/blob/main/pantalla-lcd.md#variaciones-y-enlaces-con-la-pantalla-lcd
